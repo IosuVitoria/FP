@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIENCIA LABORAL</title>
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <style>
+      /* Organización del cuerpo de la página. Fondo para contenido y organización en función de contenido.  */
+
+      main {
+          padding: 20px;
+          background: #ffffff99;
+          box-shadow: 0px 3px 3px 3px rgba(98, 153, 213, 0.838);
+          width: 80%;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          padding: 40px;
+      }
+
+      /*Organización del dl. Los cuerpos que describen los trabajos quedan así ordenados.*/
+
+      dl {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          border-radius: 15px;
+          justify-content: center;
+      }
+
+      /* Formato para los títulos de cada trabajo. Se le da un tono azul y formato para que queden en una parte lateral de la pantalla. */
+
+      dt {
+          font-weight: bold;
+          color: #4285f4;
+          margin-bottom: 5px;
+          width: 100%;
+      }
+
+      /* Estilos aplicados al contenido de cada uno de los trabajos. */
+
+      dd {
+          background-color: white;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0px 3px 3px 3px rgba(98, 153, 213, 0.838);
+          width: 80%;
+          display: inline-block;
+          line-height: 20px;
+      }
+
+      /* Estilos accesorios para compoentes de los dd. Ya sean principios de renglón donde se indica una propiedad que son los b o los párrafos normales p. */
+
+      dd img.logo {
+          margin-bottom: 10px;
+      }
+        
+      dd b {
+          color: #4285f4;
+      }
+        
+      dd p {
+          margin: 0;
+      }
+        
+      dd::after {
+          content: "";
+          display: block;
+          height: 0;
+          clear: both;
+      }
+
+      dt {
+          margin-top: 20px;
+      }
+    </style>
+
+</head>
+<body>
+    
+  <header class="header">
+    <nav class="header__nav">
+        <a class="header__nav__a" href="./index.html">Home</a>
+        <a class="header__nav__a" href="./formacion.html">Formación</a>
+        <a class="header__nav__a" href="./laboral.html">Experiencia laboral</a>
+        <a class="header__nav__a" href="./aficiones_contacto.html">Aficciones y contacto</a>
+    </nav>
+    <h1 class="header__h1">EXPERIENCIA LABORAL</h1>
+  </header>
+
+
+    <!-- TODO: para la descipción de puesto de trabajo he elegido el diccionario de definiciones. Cada uno de los <dt></dt> corresponde a los puestos que he desarrollado y los <d></d> contienen la labor desempeñada. -->
+    <!-- El resto de la estructura de la página es exactamente igual a las anteriores. -->
+
+    <main>
+        <dl>
+            <dt>Analista de laboratorio microbiológico</dt>
+            <dd>
+              <img src="./assets/aralab.jpg" alt="Logotipo de Aralab" class="logo" style="width: 70px; height: auto;"><br>
+              <b>Empresa:</b> Aralab - Meriux-Nurisciences.<br>
+              <b>Periodo:</b> Sept. 2018 - Actualidad · 5 años 1 mes.<br>
+              <b>Lugar:</b> Vitoria-Gasteiz y alrededores, España.<br>
+              <b>Descripción general tareas:</b> Control de equipos, control de stock, aislamiento de Salmonella y Listeria en agar cromogénico, técnica PCR, etc.<br>
+            </dd>
+          
+            <dt>Técnico especialista de Apple en iOS, formador y técnico de ventas</dt>
+            <dd>
+              <img src="./assets/apple.jpg" alt="Logotipo de IDenda" class="logo" style="width: 50px; height: auto;"><br>
+              <b>Empresa:</b>IDenda.<br>
+              <b>Periodo:</b> Jul. 2016 - ago. 2018 · 2 años 2 meses.<br>
+              <b>Lugar:</b> Vitoria-Gasteiz y alrededores, España.<br>
+              <b>Descripción general tareas:</b> Ánalisis y gestión de garantías de Apple, realización de reparaciones, formación grupal y personal.<br>
+            </dd>
+          
+            <dt>Informático y diseñador de aplicaciones para gestión documental</dt>
+            <dd>
+              <img src="./assets/preoca.jpg" alt="Logotipo de PREOCA" class="logo" style="width: 70px; height: auto;"><br>
+              <b>Empresa:</b>PREOCA Servicios medioambientales SL.<br>
+              <b>Periodo:</b> Mar. 2015 - sept. 2015 · 7 meses.<br>
+              <b>Lugar:</b> Vitoria-Gasteiz y alrededores, España.<br>
+              <b>Descripción general tareas:</b> Elaboración de documentación para cursos, procedimentación, diseño de una aplicación para elaborar cartas de porte y creación de soluciones informáticas para la gestión medioambiental.<br>
+            </dd>
+          
+            <dt>Analista en el laboratorio de Fisiología animal</dt>
+            <dd>
+              <img src="./assets/ehu_logo.jpg" alt="Logotipo de Universidad del País Vasco" class="logo" style="width: 50px; height: auto;"><br>
+              <b>Empresa:</b> Departamento de Fisiología Animal de la UPV-EHU.<br>
+              <b>Periodo:</b> Oct. 2012 - feb. 2013 · 5 meses.<br>
+              <b>Lugar:</b> Universidad del País Vasco.<br>
+              <b>Descripción general tareas:</b> Extracción de contenido de glándulas digestivas de mejillones.<br>
+            </dd>
+          
+            <dt>Técnico de ventas</dt>
+            <dd>
+              <img src="./assets/game.png" alt="Logotipo de GAME STORE IBERIA" class="logo" style="width: 70px; height: auto;"><br>
+              <b>Empresa:</b> GAME STORE IBERIA.<br>
+              <b>Periodo:</b> 2010 - 2011 · 1 año.<br>
+              <b>Lugar:</b> Vitoria-Gasteiz y alrededores, España.<br>
+              <b>Descripción general tareas:</b> Labores de gestión de tienda y trato con el cliente.<br>
+            </dd>
+          
+          </dl>
+          
+    </main>
+
+    <footer class="footer">
+      <section class="footer__social">
+        <h3 class="footer__social__h3">Redes sociales</h3>
+        <ul class="footer__social__ul">
+          <li><a href="https://github.com/IosuVitoria"><span><img src="./assets/GitHub_logo.png" alt="logo github" style="width: 30px; margin-right: 10px; background-color: white; border-radius: 10px; padding: 2px;"></span>Github IosuVitoria</a></li>
+          <li><a href="https://www.linkedin.com/in/iosu-gomez-biologo-analista/"> <span><img src="./assets/Likedin_logo.png" alt="logo github" style="width: 30px; margin-right: 10px;"></span>Linkedin Iosu Gómez Valdecantos</a></li>
+        </ul>
+      </section>
+    
+      <section class="footer__projects">
+        <h3 class="footer__projects__h3" >Proyectos PRE-FP</h3>
+        <ul class="footer__projects__links">
+          <li><a href="https://100-days-of-code-appclima.vercel.app/">App Climática</a></li>
+          <li><a href="https://paleta-de-colores-psi.vercel.app/">Paleta de colores</a></li>
+        </ul>
+      </section>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* Esta es la hoja de estilos correspondiente a la página index.html */
+
+
+/* Cuerpo de la tarjeta de presentación */
+
+.main__presentation{
+    display: flex;
+    width: 55%;
+    margin: 0 auto;
+    gap: 45px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    background: #ffffff99;
+    padding: 45px;
+    border-radius: 25px;
+    box-shadow: 0px 3px 3px 3px rgba(98, 153, 213, 0.838);
+}
+
+.main__presentation__div{    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.main__presentation__img{
+    box-shadow: 0px 3px 3px 3px rgba(98, 153, 213, 0.838);
+}
+
+
+.main__presentation__div__content a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: black;
+    margin-top: 40px;
+}
+
+.main__presentation__div__content a:hover{
+    font-weight: bolder;
+    cursor: pointer;
+    
+}
+
+/* Título de la sección de links de la zona tras la tarjeta con foto y datos personales. */
+
+.main__links__header{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: #ffffff99;
+    box-shadow: 0px 3px 3px 3px rgba(98, 153, 213, 0.838);
+    padding: 10px;
+    width: 30%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    border-radius: 25px;
+}
+
+/* Contenido de los enlaces. Estilos específicos. */
+
+.main__links__content{
+    display: flex;
+    flex-direction: column;
+    background: #ffffff99;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    gap: 45px;
+    padding: 45px;
+    border-radius: 45px;
+    box-shadow: 0px 3px 3px 3px rgba(98, 153, 213, 0.838);
+}
+
+/* Elementos de estilo que permiten diferenciar los contenedores de los links. */
+
+.main__links__content__sructure{
+    transform: translateX(40%);
+    padding: 25px;
+    background: #d3d3ff;
+    border-radius: 25px;
+    display: flex;
+    width: 50%;
+    box-shadow: 0px 3px 3px 3px #d3d3ff;
+    margin-bottom: 40px;
+}
+
+.main__links__content__text{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main__links__content__text a{
+    color: black;
+    text-decoration: none;
+}
+
+.main__links__content__text a:hover{
+    font-weight: 700;
+    cursor: pointer;
+
+}
+
+.modifier{
+    transform: translateX(-40%);
+}

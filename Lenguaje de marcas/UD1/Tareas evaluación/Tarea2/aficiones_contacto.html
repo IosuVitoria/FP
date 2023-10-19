@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/contacto.css">
+    <script src="https://kit.fontawesome.com/8ebf7ff831.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <title>Aficciones y contacto</title>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="header__nav">
+        <a class="header__nav__a" href="./index.html">Home</a>
+        <a class="header__nav__a" href="./formacion.html">Formación</a>
+        <a class="header__nav__a" href="./laboral.html">Experiencia laboral</a>
+        <a class="header__nav__a" href="./aficiones_contacto.html">Aficciones y contacto</a>
+    </nav>
+    <h1 class="header__h1">AFICCIONES Y CONTACTO</h1>
+  </header>
+
+    <!-- Para esta página se generan dos secciones: La primera es mis aficiones listadas usando las etiquetas <ul></ul> y <li></li> (no hay necesidad de usar la etiqueta <ol></ol> porque no hay orden de preferencia) y la segunda que es el típico formulario de contacto para contactar. 
+    Normalmente usaría librería Email.js pero para este caso uso mailto y que se abra el gestor de correo por defecto que tenga el visitante de la página. -->
+    
+    <main>
+        
+        <section class="main__activities">
+            <h1 style="text-transform: uppercase; font-weight: 700;">Mis Aficiones</h1>
+            <p>Disfruto de varias aficiones, algunas de ellas son:</p>
+            <ul class="main__activities__ul">
+              <li class="main__activities__ul__li firstact">Atletismo</li>
+              <li class="main__activities__ul__li secondact">Baile</li>
+              <li class="main__activities__ul__li thirdact">Cocinar</li>
+              <li class="main__activities__ul__li fourthact">Botánica</li>
+              <li class="main__activities__ul__li fifthact ">Fotografía</li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/opzcBfwyqXU?si=ltxztKKXXFPgFO_X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3>Aquí dejo un video de un entrenador que me gusta de youtube.</h3>
+        </section>
+          
+        
+
+        <section class="main__contact">
+            <div class="main__contact__text">
+              <h2 class="main__contact__text__h2">Contacto</h2>
+              <p class="main__contact__text__p">Si quieres ponerte en contacto conmigo, no dudes en escribirme por mis redes sociales o bien puedes enviar un correo a: <a href="mailto:iosugvaldecantos@gmail.com">iosugvaldecantos@gmail.com</a></p>
+              <h3 class="main__contact__text__h3">Utiliza este formulario de contacto:</h3>
+            </div>
+
+            <div class="main__contact__form">
+                <!-- En un formulario de contacto si utilizamos la propiedad required estamos obligando a rellenar el campo para que funcione el envío de la información. -->
+                <form action="mailto:iosugvaldecantos@gmail.com" method="post" enctype="text/plain">
+                    <input class="input__name" type="text" placeholder="Nombre" name="nombre" required>
+                    <input class="input__email" type="email" placeholder="Correo electrónico" name="correo" required>
+                    <textarea class="Mensaje input__textarea" rows="5" name="mensaje" required></textarea>
+                    <button class="form__botton" type="submit"><i class="fa-regular fa-paper-plane" style="margin-right: 8px; color: rgb(98, 154, 213);" ></i>Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+      <section class="footer__social">
+        <h3 class="footer__social__h3">Redes sociales</h3>
+        <ul class="footer__social__ul">
+          <li><a href="https://github.com/IosuVitoria"><span><img src="./assets/GitHub_logo.png" alt="logo github" style="width: 30px; margin-right: 10px; background-color: white; border-radius: 10px; padding: 2px;"></span>Github IosuVitoria</a></li>
+          <li><a href="https://www.linkedin.com/in/iosu-gomez-biologo-analista/"> <span><img src="./assets/Likedin_logo.png" alt="logo github" style="width: 30px; margin-right: 10px;"></span>Linkedin Iosu Gómez Valdecantos</a></li>
+        </ul>
+      </section>
+    
+      <section class="footer__projects">
+        <h3 class="footer__projects__h3" >Proyectos PRE-FP</h3>
+        <ul class="footer__projects__links">
+          <li><a href="https://100-days-of-code-appclima.vercel.app/">App Climática</a></li>
+          <li><a href="https://paleta-de-colores-psi.vercel.app/">Paleta de colores</a></li>
+        </ul>
+      </section>
+  </footer>
+</body>
+</html>

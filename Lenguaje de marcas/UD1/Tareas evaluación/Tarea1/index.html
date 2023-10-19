@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- El cuerpo de la página va a ser dividido en 3 grandes zonas: La zona "header" que encabeza la página da título al contenido y permite navegación. La zona "main" donde está el contenido principal y la zona de "footer" que cierra la página.  -->
+
+    <!-- Zona "header" de página:  para nav y header que da contexto al contenido de la página -->
+    <header class="header">
+        <nav class="header__nav">
+            <a class="header__nav__a" href="./index.html">Home</a>
+            <a class="header__nav__a" href="./formacion.html">Formación</a>
+            <a class="header__nav__a" href="./laboral.html">Experiencia laboral</a>
+            <a class="header__nav__a" href="./aficiones_contacto.html">Aficciones y contacto</a>
+        </nav>
+        <h1 class="header__h1">CURRICULUM VITAE</h1>
+    </header>
+
+    <!-- Zona "main" de la página. Aquí tenemos la información que vamos a mostrar en el sitio web. Objetivo dividir la información entre lo esencial y la presentación y navegación moderna dentro de la página.-->
+    <main>
+
+        <section class = "main__presentation">
+            <img class = "main__presentation__img" src="./assets/fotoCV.jpg" alt="imagen personal" style="width: 350px; border-radius: 50px 0px;">
+            <div class = "main__presentation__div">
+                <header class = "main__presentation__div__header" >
+                    <h1>Iosu Gómez Valdecantos</h1>
+                </header>
+                <div class = "main__presentation__div__content" >
+                    <h3><b style="font-weight: bolder; margin-right: 10px; line-height: 25px;">Teléfono:</b>620829248</h3>
+                    <h3><b style="font-weight: bolder; margin-right: 10px; line-height: 25px; margin-bottom: 40px;">Email: </b>iosugvaldecantos@gmail.com</h3>
+                    <a href="./assets/CV_Iosu.pdf" download="CV_Iosu.pdf"><span><img src="./assets/Descarga_logo.png" alt="logo descarga" style="width: 40px;"> </span>Descargar Currículum Vitae</a>
+                </div>
+            </div>
+        </section>
+
+
+          <!-- Navegación moderna por las páginas del CV siguiendo estilo Huddle o similares.  -->
+        <section class="main__links">
+            <header class="main__links__header">
+                <h2>Te invito a conocerme</h2>
+            </header>
+            <div class="main__links__content">
+                <div class="main__links__content__sructure">
+                    <div class="main__links__content__text">
+                        <h3 style="font-weight: 700;">Formación</h3>
+                        <p>La formación siempre ha sido algo que he disfrutado en mi vida.</p>
+                        <a href="./formacion.html">Acceder</a>
+                    </div>
+                    <img class="main__links__content__img" src="./assets/piggy-bank-c.svg" alt="imagen formación" style="width: 250px;">
+                </div>
+                <div class="main__links__content__sructure modifier">
+                    <div class="main__links__content__text">
+                        <h3 style="font-weight: 700;">Experiencia laboral</h3>
+                        <p>He trabajado en diversos sectores y todos ellos me han aportado algo.</p>
+                        <a href="./laboral.html">Acceder</a>
+                    </div>
+                    <img  class="main__links__content__img" src="./assets/experiencia.svg" alt="imagen experiencia" style="width: 250px;">
+                </div>
+                <div class="main__links__content__sructure">
+                    <div class="main__links__content__text">
+                        <h3 style="font-weight: 700;">Aficiones y contacto</h3>
+                        <p><em>El tiempo es un recurso finito.</em> Mi tiempo personal es muy importante y procuro aprovechar el máximo.</p>
+                        <a href="./laboral.html">Acceder</a>
+                    </div>
+                    <img  class="main__links__content__img" src="./assets/team-building-6.svg" alt="imagen contacto" style="width: 250px;">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Zona "footer" de la página. En otras páginas muestra enlaces a temas legales, contacto por email, telefónico, etc... En este caso muestra mis perfiles laborales y un par de proyectos previos a la FP. -->
+    <footer class="footer">
+        <section class="footer__social">
+          <h3 class="footer__social__h3">Redes sociales</h3>
+          <ul class="footer__social__ul">
+            <li><a href="https://github.com/IosuVitoria"><span><img src="./assets/GitHub_logo.png" alt="logo github" style="width: 30px; margin-right: 10px; background-color: white; border-radius: 10px; padding: 2px;"></span>Github IosuVitoria</a></li>
+            <li><a href="https://www.linkedin.com/in/iosu-gomez-biologo-analista/"> <span><img src="./assets/Likedin_logo.png" alt="logo github" style="width: 30px; margin-right: 10px;"></span>Linkedin Iosu Gómez Valdecantos</a></li>
+          </ul>
+        </section>
+      
+        <section class="footer__projects">
+          <h3 class="footer__projects__h3" >Proyectos PRE-FP</h3>
+          <ul class="footer__projects__links">
+            <li><a href="https://100-days-of-code-appclima.vercel.app/">App Climática</a></li>
+            <li><a href="https://paleta-de-colores-psi.vercel.app/">Paleta de colores</a></li>
+          </ul>
+        </section>
+    </footer>
+
+
+</body>
+</html>

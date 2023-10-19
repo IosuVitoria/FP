@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+/* Este documento porta los estilos básicos para las páginas del sitio web. Aquí primero podemos encontrar los reseteadores y el estilo de fuente genetal.
+ Posteriormente se puede ver el fondo que será aplicado a todas las páginas. */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+}
+
+body{
+    background-image: url("../assets/kelly-sikkema-VBPzRgd7gfc-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Estilos asociados al header.  */
+
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(98, 153, 213, 0.838);
+    margin-bottom: 20px;
+}
+
+.header__nav{
+    display: inline-block;
+}
+
+.header__nav__a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.header__nav__a:hover{
+    background-color: rgb(6, 6, 151, 0.869);
+    padding: 5px 2px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 3px 3px rgb(6, 6, 151, 0.869);
+ 
+}
+
+.header__h1{
+    color: white;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilos asociados al footer.  */
+
+.footer{
+    display: flex;
+    gap: 85px;
+    justify-content: center;
+    line-height: 50px;
+    background-color: rgba(98, 153, 213, 0.838);
+    margin-top: 45px;
+}
+
+.footer__social__h3{
+    color: white;
+    font-weight: 700;
+}
+
+.footer__social__ul{
+    color:white;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    list-style: none;
+}
+
+.footer__social__ul li{
+    display: inline-block;
+}
+
+.footer__social__ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer__projects__h3{
+    color: white;
+    font-weight: 700;
+}
+
+.footer__projects__links{
+    list-style: none;
+}
+
+.footer__projects__links li a{
+    color: white;
+    text-decoration: none;
+}

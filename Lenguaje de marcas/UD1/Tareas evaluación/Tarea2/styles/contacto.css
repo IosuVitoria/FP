@@ -1,0 +1,127 @@
+/* Esta es la hoja de de estilos que se asocia a la hoja de aficiones y contacto.  */
+
+/*Esta primera parte es la que se encarga de las aficiones que tengo. Empezamos con el contenedor general y luego se van ubicando el resto de elementos. */
+
+.main__activities{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    background: #ffffff99;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 55px;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0px 3px 3px 3px rgba(98, 153, 213, 0.838);
+}
+
+.main__activities__ul{
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.main__activities__ul__li{
+    list-style: none;
+}
+
+.firstact,
+.secondact,
+.thirdact,
+.fourthact,
+.fifthact{
+    background-color: rgba(98, 153, 213, 0.838);
+    box-shadow: 0px 3px 3px 3px rgba(98, 153, 213, 0.838);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.main__activities iframe{
+    border: 1px solid rgba(98, 153, 213, 0.838);
+    box-shadow: 0px 3px 3px 3px rgba(98, 153, 213, 0.838);
+    border-radius: 50px;
+}
+
+/* Segunda parte del CSS. Este CSS es el encargado de dar formato al formulario. */
+
+.main__contact{
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff99;
+    box-shadow: 0px 3px 3px 3px rgba(98, 153, 213, 0.838);
+    padding: 25px;
+    border-radius: 25px;
+}
+
+.main__contact__text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__contact__text__h2,
+.main__contact__text__h3{
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.main__contact__form{
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    align-items: center;
+    gap: 10px;
+}
+
+.input__name,
+.input__email{
+    width: 100%;
+    padding: 8px;
+    border-radius: 25px;
+    background: #ffffffdc;
+    box-shadow: 0px 3px 3px 3px rgba(98, 153, 213, 0.838);
+    margin-bottom: 20px;
+    border: none;
+}
+
+.input__textarea{
+    width: 100%;
+    padding: 8px;
+    border-radius: 15px;
+    background: #ffffffdc;
+    box-shadow: 0px 3px 3px 3px rgba(98, 153, 213, 0.838);
+    margin-bottom: 20px;
+    border: none;
+    height: 150px;
+}
+
+.form__botton{
+    display: flex;
+    width: 30%;
+    margin: 0 auto;
+    padding: 8px;
+    border-radius: 25px;
+    background: #ffffffdc;
+    box-shadow: 0px 3px 3px 3px rgba(98, 153, 213, 0.838);
+    margin-bottom: 20px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__botton:hover{
+    transform: translateY(-1px);
+    cursor: pointer;
+    background-color: rgba(98, 153, 213, 0.838);
+    font-weight: 700;
+}
+
