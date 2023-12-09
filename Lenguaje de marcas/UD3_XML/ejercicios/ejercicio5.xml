@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista>
+    <libro>
+        <título>El Señor de los Anillos</título>
+        <autor>J.R.R. Tolkien</autor>
+        <publicacion>1954</publicacion>
+    </libro>
+    <libro>
+        <título>Cien años de soledad</título>
+        <autor>Gabriel García Márquez</autor>
+        <publicacion>1967</publicacion>
+    </libro>
+    <libro>
+        <título>1984</título>
+        <autor>George Orwell</autor>
+        <publicacion>1949</publicacion>
+    </libro>
+    <libro>
+        <título>Matar a un ruiseñor</título>
+        <autor>Harper Lee</autor>
+        <publicacion>1960</publicacion>
+    </libro>
+    <libro>
+        <título>Harry Potter y la piedra filosofal</título>
+        <autor>J.K. Rowling</autor>
+        <publicacion>1997</publicacion>
+    </libro>
+    <libro>
+        <título>Don Quijote de la Mancha</título>
+        <autor>Miguel de Cervantes</autor>
+        <publicacion>1605</publicacion>
+    </libro>
+    <libro>
+        <título>Orgullo y prejuicio</título>
+        <autor>Jane Austen</autor>
+        <publicacion>1813</publicacion>
+    </libro>
+    <libro>
+        <título>Fahrenheit 451</título>
+        <autor>Ray Bradbury</autor>
+        <publicacion>1953</publicacion>
+    </libro>
+    <libro>
+        <título>Los juegos del hambre</título>
+        <autor>Suzanne Collins</autor>
+        <publicacion>2008</publicacion>
+    </libro>
+    <libro>
+        <título>Crónicas de una muerte anunciada</título>
+        <autor>Gabriel García Márquez</autor>
+        <publicacion>1981</publicacion>
+    </libro>
+    <libro>
+        <título>El gran Gatsby</título>
+        <autor>F. Scott Fitzgerald</autor>
+        <publicacion>1925</publicacion>
+    </libro>
+</lista>

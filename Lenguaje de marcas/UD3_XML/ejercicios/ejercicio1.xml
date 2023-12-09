@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista>
+    <item>
+        <producto>Latas de atún</producto>
+        <cantidad>2 unidades</cantidad>
+        <precio>2,99 euros</precio>
+    </item>
+    <item>
+        <producto>Salmón</producto>
+        <cantidad>400 gramos</cantidad>
+        <precio>8,99 euros</precio>
+    </item>
+    <item>
+        <producto>Espárragos trigueros</producto>
+        <cantidad>1 manojo</cantidad>
+        <precio>3,99 euros</precio>
+    </item>
+    <item>
+        <producto>Caja de leche</producto>
+        <cantidad>1</cantidad>
+        <precio>6,99 euros</precio>
+    </item>
+    <item>
+        <producto>Mandarinas</producto>
+        <cantidad>2 kg</cantidad>
+        <precio>4,99 euros</precio>
+    </item>
+    <item>
+        <producto>Manzans</producto>
+        <cantidad>2kg</cantidad>
+        <precio>5,99 euros</precio>
+    </item>
+
+</lista>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=""></script>
+    <title>RUNNERLAND</title>
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/especific/zapatillas.css">
+    <link rel="shortcut icon" href="./assets/logo_bruto.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/8ebf7ff831.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZwT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="./javascript/menu.js" defer></script>
+
+</head>
+<body>
+    
+    <!-- Parte inicial de la página. HEADER. Parte que da cabida a los siguientes elementos: logo, nombre de la página y elemento nav que permite la navegación entre 
+    las diferentes páginas. Estos elementos tendrán sus estilos en el general css al ser comunes en todas las páginas. -->
+
+    <header class="header__general">
+        <img src="./assets/logo_bruto.png" alt="logo de runnerland" class="header__image">
+        <h1>RUNNERLAND</h1>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <button title="menu-button" class="menu-button" id="hover-menu"><i class="fa-solid fa-bars"></i></button>
+        <ul class="header__content__nav">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="carreras.html">CARRERAS</a></li>
+          <li><a href="zapatillas.html">ZAPATILLAS</a></li>
+          <li><a href="entrenamientos.html">ENTRENAMIENTOS</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </header>
+
+    <!-- Página de elementos con enlace a una web externa. Requisito de la actividad. Además se usa bootstrap como funcionalidad nueva no vista previamente. -->
+
+
+    <div class="container-fluid">
+        <div class="px-lg-5">
+      
+            <!-- Parte de "presentación de la página" -->
+          <div class="row py-5">
+            <div class="col-lg-12 mx-auto container__zapatillas">
+              <div class="text-white p-4 shadow-sm rounded banner">
+                <h1 class="display-4">ELIGE TU ZAPATILLA</h1>
+                <p class="lead">Dejo aquí algunas zapatillas que son interesantes para las pesonas que se animan a correr. Comentaré marca, descripción y un enlace a Amazon para poder comprarlas.</p>
+              </div>
+            </div>
+          </div>
+  
+      
+          <div class="row">
+            <!-- Item de la galería nº 1 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-4 ">
+              <div class="bg-white rounded shadow-lg"><img src="https://th.bing.com/th/id/OIP.dQHJ8E55TknWPI-UAuhifwHaFj?rs=1&pid=ImgDetMain" alt="imagen de zapatillas" style="width: 300px; height: 300px" class="img-fluid card-img-top image">
+                <div class="p-4">
+                  <h5>SALOMON Sense Ride, Zapatillas Hombre</h5>
+                  <p class="small text-muted mb-0">Zapatillas de trail para un máximo agarre. Imprescindibles para todo el mundo que quiera corriendo por el monte. </p>
+                  <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                    <a href="https://www.amazon.es/SALOMON-Zapatillas-Senderismo-Evening-Primrose/dp/B08LMP11N7?pd_rd_w=hn6uA&content-id=amzn1.sym.ff43a870-772c-49a5-a2d0-7ea62c0a6be6&pf_rd_p=ff43a870-772c-49a5-a2d0-7ea62c0a6be6&pf_rd_r=7B061BK81D7QNAPQ3D6E&pd_rd_wg=CtfGR&pd_rd_r=2b79959d-19d1-4aa5-a292-759445ead7b8&pd_rd_i=B08LMP11N7&ref_=pd_bap_d_grid_rp_0_1_ec_i&th=1&psc=1" class="small text-muted mb-0">
+                       Compra<i class="fa fa-amazon" aria-hidden="true"></i>
+                      </a>
+                    <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">Trail</span></p>
+                    <div class="badge badge-danger px-3 rounded-pill font-weight-normal">Nuevas</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Fin del item 1. -->
+      
+            <!-- Item de la galería nº 2 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+              <div class="bg-white rounded shadow-lg"><img src="https://target.scene7.com/is/image/Target/GUEST_b51d6b7c-8859-44fb-880a-646d397ddd15?wid=488&hei=488&fmt=pjpeg" style="width: 300px; height: 300px"  alt="imagen de zapatillas"   class="img-fluid card-img-top image">
+                <div class="p-4">
+                  <h5>ASICS Gel Excite 10 1011B600002, Deportivas</h5>
+                  <p class="small text-muted mb-0">Excelentes zapatillas para aquellos que se quieran iniciar en el mundo del running sin dejarse mucho dinero. Amortiguación apropiada para el nivel de zapatilla que es.</p>
+                  <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                    <a href="https://www.amazon.es/Asics-Gel-Excite-Running-Hombre-Illusion/dp/B0C5Y56LGX/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=DAA3BZUVD8LJ&keywords=asics&qid=1701380595&refinements=p_36%3A2493684031&rnid=2493681031&s=apparel&sprefix=asics%2Caps%2C126&sr=1-2&th=1&psc=1" class="small text-muted mb-0">
+                        Compra <i class="fa fa-amazon" aria-hidden="true"></i>
+                      </a>
+                    <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">Asfalto</span></p>
+                    <div class="badge badge-danger px-3 rounded-pill font-weight-normal">Nuevas</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Fin del item -->
+      
+            <!-- Item de la galería nº 3 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+              <div class="bg-white rounded shadow-sm"><img src="https://cdn.palbincdn.com/users/21366/images/under-armour-surge-3-azul-marino-1659017584.JPG" alt="" class="img-fluid card-img-top" style="width: 500px; height: 300px;">
+                <div class="p-4">
+                  <h5> <a href="#" class="text-dark">Under Armour Hombres UA Surge 3 Zapatillas Running</a></h5>
+                  <p class="small text-muted mb-0">Zaptillas que lo mismo nos valen para caminar largas distancias o trotes ligeros. </p>
+                  <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                    <a href="https://www.amazon.es/Under-Armour-Zapatos-correr-Hombre/dp/B09692RNVW/ref=sr_1_5?adgrpid=1307319761146923&hvadid=81707573777767&hvbmt=be&hvdev=c&hvlocphy=164623&hvnetw=o&hvqmt=e&hvtargid=kwd-81707722256516%3Aloc-170&hydadcr=26222_1958577&keywords=zapatillas+correr&qid=1701454334&sr=8-5" class="small text-muted mb-0">
+                        Compra <i class="fa fa-amazon" aria-hidden="true"></i>
+                      </a>
+                    <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">Asfalto</span></p>
+                    <div class="badge badge-danger px-3 rounded-pill font-weight-normal">Nuevas</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Fin del item 3 -->
+      
+            <!-- Item de la galería nº 4 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+              <div class="bg-white rounded shadow-sm"><img src="https://th.bing.com/th/id/OIP.4l96x40YLQmKVhsegxNXAgHaH5?w=193&h=206&c=7&r=0&o=5&pid=1.7" alt="" class=" image img-fluid card-img-top" style="width: 300px; height: 300px;" >
+                <div class="p-4">
+                  <h5> <a href="#" class="text-dark">Adidas Duramo 10, Zapatillas de Deporte Hombre</a></h5>
+                  <p class="small text-muted mb-0">La nueva incorporación ideal para corredores de cinta que no quieran gastarse mucho dinero.</p>
+                  <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                    <a href="https://www.amazon.es/adidas-Duramo-Running-Hombre-Metallic/dp/B09HZ8RBHL/ref=sr_1_10?adgrpid=1307319761146923&hvadid=81707573777767&hvbmt=be&hvdev=c&hvlocphy=164623&hvnetw=o&hvqmt=e&hvtargid=kwd-81707722256516%3Aloc-170&hydadcr=26222_1958577&keywords=zapatillas%2Bcorrer&qid=1701455452&sr=8-10&th=1&psc=1" class="small text-muted mb-0">
+                        Compra <i class="fa fa-amazon" aria-hidden="true"></i>
+                      </a>
+                    <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">Asfalto</span></p>
+                    <div class="badge badge-danger px-3 rounded-pill font-weight-normal">Recientes</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Fin del item 4 -->
+      
+            <!-- Item de la galería Nº 5 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+              <div class="bg-white rounded shadow-sm"><img src="https://th.bing.com/th/id/OIP.Wtt02JHUrXcqXEHyrP366wHaFj?rs=1&pid=ImgDetMain" alt="" class=" image img-fluid card-img-top" style="width: 400px; height: 300px; margin: 0 auto">
+                <div class="p-4">
+                  <h5> <a href="#" class="text-dark">ASICS Gel-Pulse 14, Sneaker Hombre</a></h5>
+                  <p class="small text-muted mb-0">Zaptatillas de Asics rápidas para corredores pesados.</p>
+                  <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                    <a href="https://www.amazon.es/Asics-Pulse-Sneaker-Hombre-White/dp/B0C5Y58DLK/ref=sr_1_1?adgrpid=1307319761146923&hvadid=81707573777767&hvbmt=be&hvdev=c&hvlocphy=164623&hvnetw=o&hvqmt=e&hvtargid=kwd-81707722256516%3Aloc-170&hydadcr=26222_1958577&keywords=zapatillas%2Bcorrer&qid=1701455925&refinements=p_89%3AASICS&rnid=1692911031&s=apparel&sr=1-1&th=1&psc=1" class="small text-muted mb-0">
+                        Compra <i class="fa fa-amazon" aria-hidden="true"></i>
+                      </a>
+                    <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">Asfalto</span></p>
+                    <div class="badge badge-danger px-3 rounded-pill font-weight-normal">Recientes</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Fin del item 5 -->
+      
+            <!-- Item de la galería Nº 6 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded shadow-sm"><img src="https://th.bing.com/th/id/OIP.IFR9iWlnM70gU_MDT4nJ1gHaHa?rs=1&pid=ImgDetMain" alt="" class=" image img-fluid card-img-top" style="width: 320px; height: 280px; margin: 0 auto">
+                  <div class="p-4">
+                    <h5> <a href="#" class="text-dark">ASICS Gel Sonoma 7 1011B595020</a></h5>
+                    <p class="small text-muted mb-0">Zaptatillas de Asics rápidas para corredores de trail. Disfruta del monte con estas zapatillas que te ayudarán a conseguir tu mejor rendimiento.</p>
+                    <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                      <a href="https://www.amazon.es/ASICS-Gel-Sonoma-Trail-Running-Hombre/dp/B0BN7CK1L8/ref=sr_1_8?adgrpid=1307319761146923&hvadid=81707573777767&hvbmt=be&hvdev=c&hvlocphy=164623&hvnetw=o&hvqmt=e&hvtargid=kwd-81707722256516%3Aloc-170&hydadcr=26222_1958577&keywords=zapatillas%2Bcorrer&qid=1701456287&refinements=p_89%3AASICS&rnid=1692911031&s=apparel&sr=1-8&th=1&psc=1" class="small text-muted mb-0">
+                         ECompra <i class="fa fa-amazon" aria-hidden="true"></i>
+                        </a>
+                      <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">Trail</span></p>
+                      <div class="badge badge-danger px-3 rounded-pill font-weight-normal">Recientes</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Fin del item 6 -->
+      
+            <!-- Item de la galería Nº 7 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded shadow-sm"><img src="https://th.bing.com/th/id/OIP.dOcaxSnKhsGl25OJjXjszgHaHa?rs=1&pid=ImgDetMain" alt="" class=" image img-fluid card-img-top" style="width: 320px; height: 280px; margin: 0 auto">
+                  <div class="p-4">
+                    <h5> <a href="#" class="text-dark">ASICS Kayano 28 Zapatillas de Carretera para Hombre Azul Negro EU</a></h5>
+                    <p class="small text-muted mb-0">Zapatillas tope de gama para los más exigentes.</p>
+                    <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                      <a href="https://www.amazon.es/ASICS-Kayano-Scarpa-Running-Strada/dp/B09MJXSB3K/ref=sr_1_16?adgrpid=1307319761146923&hvadid=81707573777767&hvbmt=be&hvdev=c&hvlocphy=164623&hvnetw=o&hvqmt=e&hvtargid=kwd-81707722256516%3Aloc-170&hydadcr=26222_1958577&keywords=zapatillas%2Bcorrer&qid=1701456287&refinements=p_89%3AASICS&rnid=1692911031&s=apparel&sr=1-16&th=1&psc=1" class="small text-muted mb-0">
+                        Compra <i class="fa fa-amazon" aria-hidden="true"></i>
+                        </a>
+                      <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">Asfalto</span></p>
+                      <div class="badge badge-danger px-3 rounded-pill font-weight-normal">Top</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Fin del item 7 -->
+      
+            <!-- Item de la galería Nº 8 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded shadow-sm"><img src="https://th.bing.com/th/id/OIP.IxZ1LBohHa2omSJsIh8j4wHaHa?rs=1&pid=ImgDetMain" alt="" class=" image img-fluid card-img-top" style="width: 320px; height: 280px; margin: 0 auto">
+                  <div class="p-4">
+                    <h5> <a href="#" class="text-dark">ASICS GT 2000 12 Hombre Zapatos para Correr Azul Negro</a></h5>
+                    <p class="small text-muted mb-0">Zapatillas con amortiguación reforzada. Especialmente ligeras y de gran duración para las personas corredoras.</p>
+                    <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                      <a href="https://www.amazon.es/ASICS-Hombre-Zapatos-Correr-Amarillo/dp/B0BN9KFW92/ref=sr_1_24?adgrpid=1307319761146923&hvadid=81707573777767&hvbmt=be&hvdev=c&hvlocphy=164623&hvnetw=o&hvqmt=e&hvtargid=kwd-81707722256516%3Aloc-170&hydadcr=26222_1958577&keywords=zapatillas%2Bcorrer&qid=1701456287&refinements=p_89%3AASICS&rnid=1692911031&s=apparel&sr=1-24&th=1&psc=1" class="small text-muted mb-0">
+                        Compra <i class="fa fa-amazon" aria-hidden="true"></i>
+                        </a>
+                      <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">Asfalto</span></p>
+                      <div class="badge badge-danger px-3 rounded-pill font-weight-normal">Top</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Fin del item 8 -->
+      
+           <!-- Item de la galería Nº 9 -->
+           <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+            <div class="bg-white rounded shadow-sm"><img src="https://th.bing.com/th/id/OIP.JP19tZGJCQ079PXS9XpG2gHaFB?rs=1&pid=ImgDetMain" alt="" class=" image img-fluid card-img-top" style="width: 320px; height: 280px; margin: 0 auto">
+              <div class="p-4">
+                <h5> <a href="#" class="text-dark">SALOMON Speedcross 5, Zapatillas de Trail Running Mujer</a></h5>
+                <p class="small text-muted mb-0">Zapatillas de trailrunning para mujer. Especialmente ligeras para corredoras de bajo peso.</p>
+                <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                  <a href="https://www.amazon.es/SALOMON-Speedcross-Zapatillas-Running-Wrought/dp/B0984Q75WT/ref=sr_1_13?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3A56HWTCMXABY&keywords=zapatillas%2Btrail&qid=1701457237&refinements=p_36%3A2493684031&rnid=2493681031&s=apparel&sprefix=zapatillas%2Btrail%2Cfashion%2C100&sr=1-13&th=1&psc=1" class="small text-muted mb-0">
+                    Compra <i class="fa fa-amazon" aria-hidden="true"></i>
+                    </a>
+                  <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">Trail</span></p>
+                  <div class="badge badge-danger px-3 rounded-pill font-weight-normal">Oferta</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fin del item 9 -->
+      
+            <!-- Item de la galería Nº 10 -->
+           <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+            <div class="bg-white rounded shadow-sm"><img src="https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/0e2a46f103874f0b8105abce00ba9f65_9366/Zapatilla_Terrex_Eastrail_GORE-TEX_Hiking_Verde_FV6859_01_standard.jpg" alt="" class=" image img-fluid card-img-top" style="width: 320px; height: 300px; margin: 0 auto">
+              <div class="p-4">
+                <h5> <a href="#" class="text-dark">Adidas Terrex Eastrail Gore-Tex Hiking, Zapatillas Hombre</a></h5>
+                <p class="small text-muted mb-0">Zapatillas de trailrunning para hombre. Aptas para todos los públicos.</p>
+                <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                  <a href="https://www.amazon.es/adidas-Terrex-Eastrail-Zapatillas-Hiking/dp/B0C2QLRPP2/ref=sr_1_32?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3A56HWTCMXABY&keywords=zapatillas%2Btrail&qid=1701457423&refinements=p_36%3A2493684031&rnid=2493681031&s=apparel&sprefix=zapatillas%2Btrail%2Cfashion%2C100&sr=1-32&th=1&psc=1" class="small text-muted mb-0">
+                    Compra <i class="fa fa-amazon" aria-hidden="true"></i>
+                    </a>
+                  <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">Trail</span></p>
+                  <div class="badge badge-danger px-3 rounded-pill font-weight-normal">Nuevas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fin del item 10 -->
+      
+             <!-- Item de la galería Nº 11 -->
+           <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+            <div class="bg-white rounded shadow-sm"><img src="https://i.sportisimo.com/products/images/1324/1324051/full/nike-react-pegasus-trail-4-bie_0.jpg" alt="" class=" image img-fluid card-img-top" style="width: 420px; height: 250px; margin: 0 auto">
+              <div class="p-4">
+                <h5> <a href="#" class="text-dark">NIKE React Pegasus Trail 4, Zapatillas Hombre</a></h5>
+                <p class="small text-muted mb-0">Zapatillas de trailrunning reactivas para hombre y mujer. Aptas para todos los públicos.</p>
+                <p class="small text-muted mb-0">Prepara tus pies para la nueva sensación de una suela reactiva. Lo mejor para devolver la energía a las piernas.</p>
+                <p class="small text-muted mb-0">Contáctanos y pregunta!</p>
+                <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                  <a href="https://www.amazon.es/Pegasus-Sneaker-Hombre-Aura-Dark-Grey-Wolf/dp/B0B1QVHJ99/ref=sr_1_31?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3A56HWTCMXABY&keywords=zapatillas%2Btrail&qid=1701457662&refinements=p_36%3A2493684031&rnid=2493681031&s=apparel&sprefix=zapatillas%2Btrail%2Cfashion%2C100&sr=1-31&th=1&psc=1" class="small text-muted mb-0">
+                    Compra <i class="fa fa-amazon" aria-hidden="true"></i>
+                    </a>
+                  <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">Trail</span></p>
+                  <div class="badge badge-danger px-3 rounded-pill font-weight-normal">Nuevas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fin del item 11 -->
+      
+            <!-- Item de la galería Nº 1 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded shadow-sm"><img src="https://photo2.i-run.fr/puma-speed-ignite-trail-m-destockage-179101-1-z.jpg" alt="imagen de zapatillas" class=" image img-fluid card-img-top" style="width: 420px; height: 300px; margin: 0 auto">
+                  <div class="p-4">
+                    <h5> <a href="#" class="text-dark">PUMA Canjear Pro Trail, Zapatillas para Correr de Carretera Unisex Adulto</a></h5>
+                    <p class="small text-muted mb-0">Zapatillas de trailrunning para los que comienzan con el trail running.</p>
+                    <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                      <a href="https://www.amazon.es/PUMA-Canjear-Zapatillas-Correr-Carretera/dp/B0BLHTDFPX/ref=sr_1_30?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3A56HWTCMXABY&keywords=zapatillas+trail&qid=1701457662&refinements=p_36%3A2493684031&rnid=2493681031&s=apparel&sprefix=zapatillas+trail%2Cfashion%2C100&sr=1-30" class="small text-muted mb-0">
+                         Compra <i class="fa fa-amazon" aria-hidden="true"></i>
+                        </a>
+                      <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">Trail</span></p>
+                      <div class="badge badge-danger px-3 rounded-pill font-weight-normal">Oferta</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Fin del item 12 -->
+        </div>
+        </div>
+      </div>
+
+      <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const mobileMenuButton = document.getElementById('mobile-menu');
+          const hoverMenuButton = document.getElementById('hover-menu');
+          const navList = document.querySelector('.header__content__nav');
+    
+          mobileMenuButton.addEventListener('click', function (e) {
+            e.stopPropagation();
+            navList.classList.toggle('show');
+          });
+    
+          hoverMenuButton.addEventListener('click', function (e) {
+            e.stopPropagation(); 
+            navList.classList.toggle('show');
+          });
+    
+          document.addEventListener('click', function () {
+            navList.classList.remove('show');
+          });
+    
+          navList.addEventListener('click', function (e) {
+            e.stopPropagation();
+          });
+        });
+      </script> -->
+
+
+
+
+    <!-- Footer de la página. Al igual que el header es igual en todas las páginas. Se comparte tanto código html como código css mediante el uso de general css. -->
+
+
+    <footer class="footer">
+        <header>
+            <h3 class="footer__header__h3">SÍGUENOS EN NUESTRAS REDES SOCIALES</h3>
+        </header>
+        <div class="wrapper">
+            <div class="button">
+                <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+                <span><a class="link" href="https://www.facebook.com/profile.php?id=61553468563241">Facebook</a></span>
+            </div>
+            <div class="button">
+                <div class="icon"><i class="fa-brands fa-x-twitter"></i></i></div>
+                <span><a class="link" href="https://twitter.com/RunnerlandIosu">X-Twitter</a></span>
+            </div>
+            <div class="button">
+                <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+                <span><a class="link" href="https://www.instagram.com/iosurunner/">Instagram</a></span>
+            </div>
+        </div>
+        <div class="footer__contactInfo">
+            <p><b>Dirección:</b> Calle Martín Fiz Nº 12 Bajo, Vitoria-Gasteiz, Álava-Araba</p>
+            <p><b>Teléfono:</b> +34 945 058 289</p>
+            <p><b>Email:</b> runnerland2023@gmail.com</p>
+        </div>
+        <div class="footer__copyright">
+            <p>&copy; 2023 Runnerland | Todos los derechos reservados</p>
+            <a href="./politica.html">Política de privacidad</a>
+        </div>
+    </footer>
+
+</body>
+</html>

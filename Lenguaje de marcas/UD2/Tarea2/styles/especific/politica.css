@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;900&display=swap');
+
+/* Cada página va a tener su propio fondo, dando una imagen más dinámica al usuario.  */
+body{
+    background-image: url(../../assets/fondopolitica.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.policy__container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    gap: 25px;
+    margin-top: 45px;
+    align-items: flex-start;
+    border-radius: 20px;
+    background: #423f3fc6;
+    padding: 20px;
+    box-shadow: 8px 5px 10px #cbced1, -8px -5px 10px #ffffff;
+    color: white;
+}

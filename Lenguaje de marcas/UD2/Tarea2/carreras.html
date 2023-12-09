@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=""></script>
+    <title>RUNNERLAND</title>
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/especific/carreras.css">
+    <link rel="shortcut icon" href="./assets/logo_bruto.png" type="image/x-icon">
+    <script src="./javascript/carreras_vizcaya.js" defer></script>
+    <script src="./javascript/carreras_alava.js" defer></script>
+    <script src="./javascript/carreras_guipuzcoa.js" defer></script>
+    <script src="https://kit.fontawesome.com/8ebf7ff831.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <!-- Parte inicial de la página. HEADER. Parte que da cabida a los siguientes elementos: logo, nombre de la página y elemento nav que permite la navegación entre 
+    las diferentes páginas. Estos elementos tendrán sus estilos en el general css al ser comunes en todas las páginas. -->
+
+    <header class="header__general">
+        <img src="./assets/logo_bruto.png" alt="logo de runnerland" class="header__image">
+        <h1>
+            RUNNERLAND
+        </h1>
+        <div class="header__content">
+            <div class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="header__content__nav">
+                <ul class="header__content__nav__ul">
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="carreras.html">CARRERAS</a>
+                    </li>
+                    <li>
+                        <a href="zapatillas.html">ZAPATILLAS</a>
+                    </li>
+                    <li>
+                        <a href="entrenamientos.html">ENTRENAMIENTOS</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+            <!-- Contenido de la página de carreras de Runnerland. Contenido que se va a ofrecer con unas galerías. OBJETIVO CUMPLIDO DE LA EVALUACIÓN: MOSTRAR INFORMACIÓN CON UN CLICK. ADEMÁS DE ENLACE A PÁGINA WEB EXTERNA. -->
+
+            <!-- Presentación del contenido de las galerías. -->
+       
+        <section>
+            <header>
+                <h1 class="h1__carreras">Galería de Carreras</h1>
+                <h4 class="h4__carreras">Aquí se pueden ver algunas de las carreras populares que se pueden realizar por la zona. Pinchad para conocer la distancia, precios de inscripción, hora de la carrera, etc... Hay opciones para todos los gustos.</h4>
+            </header>
+
+            <!-- Galerías con la información de las carreras. -->
+
+            <div>
+                <h3 class="h3__carreras">Carreras en Álava-Araba</h3>
+                <div id="race__gallery__alava"></div>
+            </div>
+            <div>
+                <h3 class="h3__carreras">Carreras en Vizcaya-Bizkaia</h3>
+                <div id="race__gallery__vizcaya"></div>
+            </div>
+            <div>
+                <h3 class="h3__carreras">Carreras en Guipuzcoa-Guipuzkoa</h3>
+                <div id="race__gallery__guipuzcoa"></div>
+            </div>
+
+        </section>
+
+
+    <!-- Footer de la página. Al igual que el header es igual en todas las páginas. Se comparte tanto código html como código css mediante el uso de general css. -->
+
+    <footer class="footer">
+        <header>
+            <h3 class="footer__header__h3">SÍGUENOS EN NUESTRAS REDES SOCIALES</h3>
+        </header>
+        <div class="wrapper">
+            <div class="button">
+                <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+                <span><a class="link" href="https://www.facebook.com/profile.php?id=61553468563241">Facebook</a></span>
+            </div>
+            <div class="button">
+                <div class="icon"><i class="fa-brands fa-x-twitter"></i></i></div>
+                <span><a class="link" href="https://twitter.com/RunnerlandIosu">X-Twitter</a></span>
+            </div>
+            <div class="button">
+                <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+                <span><a class="link" href="https://www.instagram.com/iosurunner/">Instagram</a></span>
+            </div>
+        </div>
+        <div class="footer__contactInfo">
+            <p><b>Dirección:</b> Calle Martín Fiz Nº 12 Bajo, Vitoria-Gasteiz, Álava-Araba</p>
+            <p><b>Teléfono:</b> +34 945 058 289</p>
+            <p><b>Email:</b> runnerland2023@gmail.com</p>
+        </div>
+        <div class="footer__copyright">
+            <p>&copy; 2023 Runnerland | Todos los derechos reservados</p>
+            <a href="./politica.html">Política de privacidad</a>
+        </div>
+    </footer>
+
+</body>
+</html>

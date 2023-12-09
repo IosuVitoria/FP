@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora Neumórfica</title>
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div id="output" class="output"></div>
+            <div class="buttons">
+                <button onclick="clearOutput()" class="button">C</button>
+                <button onclick="appendInput('1')" class="button">1</button>
+                <button onclick="appendInput('2')" class="button">2</button>
+                <button onclick="appendInput('3')" class="button">3</button>
+                <button onclick="appendInput('+')" class="button operator">+</button>
+                <button onclick="appendInput('4')" class="button">4</button>
+                <button onclick="appendInput('5')" class="button">5</button>
+                <button onclick="appendInput('6')" class="button">6</button>
+                <button onclick="appendInput('-')" class="button operator">-</button>
+                <button onclick="appendInput('7')" class="button">7</button>
+                <button onclick="appendInput('8')" class="button">8</button>
+                <button onclick="appendInput('9')" class="button">9</button>
+                <button onclick="appendInput('*')" class="button operator">*</button>
+                <button onclick="appendInput('0')" class="button">0</button>
+                <button onclick="appendInput('.')" class="button">.</button>
+                <button onclick="execute()" class="button equal">=</button>
+                <button onclick="appendInput('/')" class="button operator">/</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

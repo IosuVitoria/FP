@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;900&display=swap');
+
+
+body{
+background-image: url(../../assets/fondo.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.neumorphic-container {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 8px 5px 10px #cbced1, -8px -5px 10px #ffffff;
+    margin: 20px;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+
+.footer__contactForm {
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+.footer__contactForm form textarea,
+.footer__contactForm form input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 3px 6px #7f8a95, -3px -3px 6px #dcd3d3;
+    width: 70%;
+}
+
+.footer__contactForm h3 {
+    margin-bottom: 10px;
+}
+
+.footer__contactForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__contactForm label {
+    margin-top: 10px;
+}
+
+
+.lang-button {
+    margin-top: 20px;
+    padding: 10px;
+    background: linear-gradient(to top right, #303035, #81a8c5);;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px #7f8a95, -3px -3px 6px #dcd3d3;
+    cursor: pointer;
+}
+
+.contactHeader__button{
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 3px 6px #7f8a95, -3px -3px 6px #dcd3d3;
+    font-family: "Lexend", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 30%;
+    cursor: pointer;
+
+}
+.contactHeader__button:hover{
+    color: white;
+    background: linear-gradient(to top right, #303035, #81a8c5);;
+    transform: translateY(-1px);
+    
+}
+
+/* Estilos trabajados para el menú colapsado */
+
+.header__content__nav li {
+    margin-right: 20px;
+  }
+
+  .header__content__nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 2%;
+    transition: background-color 0.3s ease;
+  }
+
+  .header__content__nav a:hover {
+    background-color: #ddd;
+    text-decoration: none;
+  }
+  .header__content__nav{
+    /* background-color: green; */
+    margin-top: 1%;
+    display: flex;
+    list-style: none;
+  }
+
+  .header__content__nav li{
+    vertical-align: center;
+    justify-content: center;
+  }
+  .menu-toggle {
+    cursor: pointer;
+    display: none;
+  }
+
+  .menu-button {
+    cursor: pointer;
+    background: linear-gradient(to top right, #343760, #709dc0);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .menu-button:hover {
+    background-color: #555;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .neumorphic-container{
+        width: 80%;
+    }
+
+    .header__content__nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 65px;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(to top right, #6f7086, #91bcde);
+      box-shadow: 0 4px 6px rgba(147, 97, 97, 0.1);
+      z-index: 1;
+    }
+
+    .header__content__nav.show {
+      display: flex;
+    }
+
+    .header__content__nav li {
+      margin-right: 0;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+
+    .menu-button {
+      display: block;
+    }
+  }

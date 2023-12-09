@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo tipo_catalogo="naturaleza">
+    <libro>
+        <titulo>The Hidden Life of Trees</titulo>
+        <autor>Peter Wohlleben</autor>
+        <publicacion>2015</publicacion>
+        <descripcion>An exploration of the secret life of trees and their communication.</descripcion>
+        <ISBN>978-0-06-220037-5</ISBN>
+        <idioma>English</idioma>
+    </libro>
+    <libro>
+        <titulo>The Sixth Extinction: An Unnatural History</titulo>
+        <autor>Elizabeth Kolbert</autor>
+        <publicacion>2014</publicacion>
+        <descripcion>An examination of the ongoing mass extinction event caused by human activities.</descripcion>
+        <ISBN>978-0-8050-9299-8</ISBN>
+        <idioma>English</idioma>
+    </libro>
+    <libro>
+        <titulo>The Diversity of Life</titulo>
+        <autor>Edward O. Wilson</autor>
+        <publicacion>1992</publicacion>
+        <descripcion>An overview of biodiversity and the importance of preserving it.</descripcion>
+        <ISBN>978-0-674-21298-3</ISBN>
+        <idioma>English</idioma>
+    </libro>
+    <libro>
+        <titulo>El Jardín de las Mariposas</titulo>
+        <autor>Amy Stewart</autor>
+        <publicacion>2016</publicacion>
+        <descripcion>Una exploración fascinante sobre las plantas venenosas más peligrosas del mundo.</descripcion>
+        <ISBN>978-84-16281-63-3</ISBN>
+        <idioma>Español</idioma>
+    </libro>
+</catalogo>

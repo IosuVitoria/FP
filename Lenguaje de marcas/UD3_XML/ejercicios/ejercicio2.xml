@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista>
+    <item>
+        <producto>Latas de atún</producto>
+        <cantidad unidad = "packs" >2</cantidad>
+        <precio >2,99 euros</precio>
+    </item>
+    <item>
+        <producto>Salmón</producto>
+        <cantidad unidad = "gramos">400</cantidad>
+        <precio>8,99 euros</precio>
+    </item>
+    <item>
+        <producto>Espárragos trigueros</producto>
+        <cantidad unidad = "manojo">1</cantidad>
+        <precio>3,99 euros</precio>
+    </item>
+    <item>
+        <producto>Caja de leche</producto>
+        <cantidad unidad = "packs" >1</cantidad>
+        <precio>6,99 euros</precio>
+    </item>
+    <item>
+        <producto>Mandarinas</producto>
+        <cantidad unidad="kilogramos">2</cantidad>
+        <precio>4,99 euros</precio>
+    </item>
+    <item>
+        <producto>Manzans</producto>
+        <cantidad unidad="kilogramos">2</cantidad>
+        <precio>5,99 euros</precio>
+    </item>
+</lista>

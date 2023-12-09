@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=""></script>
+    <title>RUNNERLAND</title>
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/especific/entrenamientos.css">
+    <link rel="shortcut icon" href="./assets/logo_bruto.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/8ebf7ff831.js" crossorigin="anonymous"></script>
+    <script src="./javascript/entrenamientos.js" defer></script>
+</head>
+<body>
+    
+    <!-- Parte inicial de la página. HEADER. Parte que da cabida a los siguientes elementos: logo, nombre de la página y elemento nav que permite la navegación entre 
+    las diferentes páginas. Estos elementos tendrán sus estilos en el general css al ser comunes en todas las páginas. -->
+
+    <header class="header__general">
+        <img src="./assets/logo_bruto.png" alt="logo de runnerland" class="header__image">
+        <h1>
+            RUNNERLAND
+        </h1>
+        <div class="header__content">
+            <nav class="header__content__nav">
+                <ul class="header__content__nav__ul">
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="carreras.html">CARRERAS</a>
+                    </li>
+                    <li>
+                        <a href="zapatillas.html">ZAPATILLAS</a>
+                    </li>
+                    <li>
+                        <a href="entrenamientos.html">ENTRENAMIENTOS</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+     <!-- Contenido de entrenamientos. 3 tablas con contenido que aparece de manera alternativa en función de lo que se elige. En la primera parte se habla sobre conceptos de entrenamiento.-->
+     <div class="training-container">
+        <header>
+            <h3 class="training-title">Planes de Entrenamiento para 5 km, 10 km y 21 km</h3>
+            <div class="training-description">
+                <h3>Mejora tu rendimiento con estos planes de entrenamiento progresivos durante 8 semanas.</h3>
+            </div>
+        </header>
+
+        <section class = "training__presentation">
+            <header class="training__presentation__header">
+                <h2>¿Qué puntos generales debe cumplir un entrenamiento?</h2>
+            </header>
+
+            <div class="training__presentation__content">
+                <h3 class="training__presentation__content__header">Calentamiento</h3>
+                <p class="training__presentation__content__text">El calentamiento es uno de los puntos principales a la hora de enfocar una tanda de entrenamiento tanto para corredores experimentados como para corredores noveles.</p>
+                <p class="training__presentation__content__text">Esta fase del ejercicio ayuda a que el esfuerzo cardiaco de la sesión sea progresivo y menos agresivo para el cuerpo. Este incremento regulado permite la correcta activación de todos los grupos musculares que se van a utilizar y reduce sustancialmente el riesgo de lesión y molestias posteriores al ejercicio.</p>
+            </div>
+
+            <div class="training__presentation__content">
+                <h3 class="training__presentation__content__header">Bloques de velocidad - Series</h3>
+                <p class="training__presentation__content__text">Un clásico dentro del mundo deportivo y una de las dos grandes modalidades de entrenamiento en atletismo. Nos las podemos encontrar de todos los colores:  </p>
+                <ul class="training__presentation__content__ul">
+                    <li><b>Cortas y intensas: </b>Series que oscilan entre 30 segundos y 1 minuto. Intercaladas con una faase de descanso que puede ser a trote o caminando. Del nivel del corredor depende que el descanso sea corriendo o andando.</li>
+                    <li><b>Medias y algo más suaves:</b>Bastante común series de 600m, 800m o 1000m. Estás son algo menos intensas que las anteriores pero también se va a tope.</li>
+                    <li><b>Largas y las mas suaves:</b> A ritmo carrera. Tandas de 2km, 3km y 4km. Tandas de preparación en las que la persona corredora se prueba para ver su estado para la carrera</li>
+                </ul>
+                <p class="training__presentation__content__text">Existen muchas opciones dentro de las series. Estas opciones van con el atleta y deben ser pautadas por un especialista para la consecuención de los resultados deseados. Dejo aquí una pequeña aplicación para el control de series: <a href="https://prueba-tecnicas-pswv.vercel.app/">Miniherramienta series.</a></p>
+            </div>
+
+            <div class="training__presentation__content">
+                <h3 class="training__presentation__content__header">Distancia - Tandas largas</h3>
+                <p class="training__presentation__content__text">Como su nombre indica, son tandas largas en las que se intenta mantener una velocidad durante todo el recorrido. No existen límite para estas tandas pero sí hay algunas recomendaciones generales: </p>
+                <ul class="training__presentation__content__ul">
+                    <li>El calentamiento no es negociable en una tanda larga. Reduce los problemas posteriores en la práctica totalidad de las corredoras y los corredores.</li>
+                    <li>Si es una tanda preparatoria para carrera no superar el 75% de la distancia real de la carrera. Si tengo como objetivo la media no debo superar los 15km-16km por ejemplo. Superar estas distancias y sumar el trabajo del día pueden generar un exceso de fatiga muscular.</li>
+                    <li>Hacer una tanda larga suave y otra tanda larga intensa. </li>
+                    <li>Antes de una tirada larga intensa intentar hacer una activación previa el día anterior.</li>
+                </ul>
+            </div>
+
+            <div class="training__presentation__content">
+                <h3 class="training__presentation__content__header">Enfriamiento</h3>
+                <p class="training__presentation__content__text">El ejercicio intenso requiere de un calentamiento como se ha dicho previamente, pero a su vez también es muy deseable un enfriamiento.</p>
+                <p class="training__presentation__content__text">En el enfriamiento se bajan las pulsaciones y el flujo sanguíneo tiene como objetivo limpiar los músculos para evitar la formación de cristales de ácido láctico.</p>
+            </div>
+
+        </section>
+
+
+        <!-- Botones para seleccionar la distancia. Apertura de la siguiente sección. Se controla de manera dinámica qué tabla se renderiza y se muestra al usuario. -->
+        <div class="distance__buttons">
+            <h4>Prueba nuestros entrenamientos bajo la supervisión de tu médico. Esto que ves son sugerencias que te animos a realizar en caso de no padecer ninguna patología que sea incompatible con este deporte.</h4>
+            <button onclick="showTraining('training5k')">5 km</button>
+            <button onclick="showTraining('training10k')">10 km</button>
+            <button onclick="showTraining('training21k')">21 km</button>
+        </div>
+
+        <!-- Plan de Entrenamiento 5 km -->
+        <div class="distance-training" id="training5k">
+            <h2>Plan de Entrenamiento para 5 km</h2>
+            <table class="training-table">
+                <tr>
+                    <th>Semana</th>
+                    <th>Fase</th>
+                    <th>Detalle</th>
+                </tr>
+                <!-- Detalles para las semanas 1-2 de 5km-->
+                <tr>
+                    <td rowspan="4">1ª - 2ª semana</td>
+                    <td>Calentamiento (Todas las sesiones de entrenamiento) </td>
+                    <td>Trote suave durante 10 minutos. Aumenta la frecuencia cardíaca gradualmente. Tienes que poder hablar mientras corres.</td>
+                </tr>
+                <tr>
+                    <td>Bloques de Velocidad</td>
+                    <td>1 vez por semana realizar 6 repeticiones de 1 minuto corriendo rápido seguido de 2 minutos de trote. Mejora la velocidad y resistencia.</td>
+                </tr>
+                <tr>
+                    <td>Distancia</td>
+                    <td>2 veces por semana correr tras el calentamiento 5 km corriendo a ritmo moderado. Mantén una velocidad constante.</td>
+                </tr>
+                <tr>
+                    <td>Enfriamiento</td>
+                    <td>5 minutos de trote suave y estiramientos. Favorece la recuperación muscular.</td>
+                </tr>
+                <!-- Detalles para las semanas 3-4 de 5km-->
+                <tr>
+                    <td rowspan="4">3ª - 4ª semana</td>
+                    <td>Calentamiento (Todas las sesiones de entrenamiento) </td>
+                    <td>Trote suave durante 10 minutos. Aumenta la frecuencia cardíaca gradualmente.</td>
+                </tr>
+                <tr>
+                    <td>Bloques de Velocidad</td>
+                    <td>1 vez a la semana corre 6 repeticiones de 1 minuto y medio corriendo rápido seguido de 2 minutos de trote. Mejora la velocidad y resistencia.</td>
+                </tr>
+                <tr>
+                    <td>Distancia</td>
+                    <td>2 veces por semana corre 5 km corriendo a ritmo moderado. Mantén una velocidad constante.</td>
+                </tr>
+                <tr>
+                    <td>Enfriamiento</td>
+                    <td>5 minutos de trote suave y estiramientos. Favorece la recuperación muscular.</td>
+                </tr>
+                <!-- Detalles para las semanas 5-6 de 5km-->
+                <tr>
+                    <td rowspan="4">5ª - 6º Semana</td>
+                    <td>Calentamiento (Todas las sesiones de entrenamiento)</td>
+                    <td>Trote suave durante 10 minutos. Aumenta la frecuencia cardíaca gradualmente.</td>
+                </tr>
+                <tr>
+                    <td>Bloques de Velocidad</td>
+                    <td>1 vez por semana corre 8 repeticiones de 1 minuto corriendo rápido seguido de 2 minutos de trote. Mejora la velocidad y resistencia.</td>
+                </tr>
+                <tr>
+                    <td>Distancia</td>
+                    <td>2 veces a la semana corre 5 km corriendo a ritmo moderado. Mantén una velocidad constante.</td>
+                </tr>
+                <tr>
+                    <td>Enfriamiento</td>
+                    <td>5 minutos de trote suave y estiramientos. Favorece la recuperación muscular.</td>
+                </tr>
+                <!-- Detalles para las semanas 7-8 de 5km-->
+                <tr>
+                    <td rowspan="4">7ª y 8ª semana</td>
+                    <td>Calentamiento (Todas las sesiones de entrenamiento)</td>
+                    <td>Trote suave durante 15 minutos. Aumenta la frecuencia cardíaca gradualmente.</td>
+                </tr>
+                <tr>
+                    <td>Bloques de Velocidad</td>
+                    <td>1 vez por semana corre 8 repeticiones de 1 minuto corriendo rápido seguido de 2 minutos de trote. Mejora la velocidad y resistencia.</td>
+                </tr>
+                <tr>
+                    <td>Distancia</td>
+                    <td>2 veces a la semana corre 5 km corriendo a ritmo moderado. Mantén una velocidad constante.</td>
+                </tr>
+                <tr>
+                    <td>Enfriamiento</td>
+                    <td>5 minutos de trote suave y estiramientos. Favorece la recuperación muscular.</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Plan de Entrenamiento 10 km -->
+        <div class="distance-training" id="training10k" style="display: none;">
+            <h2>Plan de Entrenamiento para 10 km</h2>
+            <table class="training-table">
+                <tr>
+                    <th>Semana</th>
+                    <th>Fase</th>
+                    <th>Detalle</th>
+                </tr>
+                <!-- Detalles para las semanas 1-2 de 10km-->
+                <tr>
+                    <td rowspan="4">1ª - 2ª semana</td>
+                    <td>Calentamiento (Todas las sesiones de entrenamiento)</td>
+                    <td>Trote suave durante 10 minutos. Aumenta la frecuencia cardíaca gradualmente. Debes poder hablar mientras corres.</td>
+                </tr>
+                <tr>
+                    <td>Bloques de Velocidad</td>
+                    <td>Realiza 1 vez por semana 10 repeticiones de 1 minuto corriendo rápido seguido de 2 minutos de trote. Esto mejora la velocidad y resistencia.</td>
+                </tr>
+                <tr>
+                    <td>Distancia</td>
+                    <td>Corre 2 veces por semana después del calentamiento, cubriendo 10 km a un ritmo moderado. Mantén una velocidad constante.</td>
+                </tr>
+                <tr>
+                    <td>Enfriamiento</td>
+                    <td>5 minutos de trote suave y estiramientos en todas las sesiones. Favorece la recuperación muscular.</td>
+                </tr>
+                <!-- Detalles para las semanas 3-4 de 10km-->
+                <tr>
+                    <td rowspan="4">3ª - 4ª semana</td>
+                    <td>Calentamiento (Todas las sesiones de entrenamiento)</td>
+                    <td>Trote suave durante 10 minutos. Aumenta la frecuencia cardíaca gradualmente.</td>
+                </tr>
+                <tr>
+                    <td>Bloques de Velocidad</td>
+                    <td>Realiza 2 vez por semana 10 repeticiones de 1 minuto y medio corriendo rápido seguido de 2 minutos de trote. Esto mejora la velocidad y resistencia.</td>
+                </tr>
+                <tr>
+                    <td>Distancia</td>
+                    <td>Corre 1 veces por semana cubriendo 10 km a ritmo moderado. Mantén una velocidad constante.</td>
+                </tr>
+                <tr>
+                    <td>Enfriamiento</td>
+                    <td>15 minutos de trote suave y estiramientos tras las sesiones de bloques de velocidad y 5 minutos de trote en la sesión de distancia. Favorece la recuperación muscular.</td>
+                </tr>
+                <!-- Detalles para las semanas 5-6 de 10km-->
+                <tr>
+                    <td rowspan="4">5ª - 6º Semana</td>
+                    <td>Calentamiento (Todas las sesiones de entrenamiento)</td>
+                    <td>Trote suave durante 10 minutos. Aumenta la frecuencia cardíaca gradualmente.</td>
+                </tr>
+                <tr>
+                    <td>Bloques de Velocidad</td>
+                    <td>Realiza 1 vez por semana 10 repeticiones de 1 minuto y medio corriendo rápido seguido de 1 minuto y medio de trote. Esto mejora la velocidad y resistencia.</td>
+                </tr>
+                <tr>
+                    <td>Distancia</td>
+                    <td>Corre 2 veces a la semana cubriendo 10 km a ritmo moderado. Mantén una velocidad constante.</td>
+                </tr>
+                <tr>
+                    <td>Enfriamiento</td>
+                    <td>10 minutos de trote suave y estiramientos en todas las sesiones. Favorece la recuperación muscular.</td>
+                </tr>
+                <!-- Detalles para las semanas 7-8 de 10km-->
+                <tr>
+                    <td rowspan="4">7ª y 8ª semana</td>
+                    <td>Calentamiento (Todas las sesiones de entrenamiento)</td>
+                    <td>Trote suave durante 15 minutos. Aumenta la frecuencia cardíaca gradualmente.</td>
+                </tr>
+                <tr>
+                    <td>Bloques de Velocidad</td>
+                    <td>Realiza 2 vez por semana 10 repeticiones de 2 minutos corriendo rápido seguido de 1 minuto y medio de trote. 1 vez por semana corre 5 x 1000 metros a ritmo fuerte. Descansa 2 minutos entre cada serie. Esto mejora la velocidad y resistencia.</td>
+                </tr>
+                <tr>
+                    <td>Distancia</td>
+                    <td>OPCIONAL 4º SESION. Corre 1 veces a la semana cubriendo 10 km a ritmo moderado. Mantén una velocidad constante.</td>
+                </tr>
+                <tr>
+                    <td>Enfriamiento</td>
+                    <td>5 minutos de trote suave y estiramientos en todas las sesiones. Favorece la recuperación muscular.</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Plan de Entrenamiento 21 km -->
+        <div class="distance-training" id="training21k" style="display: none;">
+            <h2>Plan de Entrenamiento para Media Maratón</h2>
+            <table class="training-table">
+                <tr>
+                    <th>Semana</th>
+                    <th>Fase</th>
+                    <th>Detalle</th>
+                </tr>
+                <!-- Detalles para las semanas 1-2 de Media Maratón -->
+                <tr>
+                    <td rowspan="4">1ª - 2ª semana</td>
+                    <td>Calentamiento (Todas las sesiones de entrenamiento)</td>
+                    <td>Trote suave durante 15 minutos. Aumenta la frecuencia cardíaca gradualmente. Debes poder hablar mientras corres.</td>
+                </tr>
+                <tr>
+                    <td>Bloques de Velocidad</td>
+                    <td>Realiza 1 vez por semana 10 repeticiones de 2 minutos corriendo rápido seguido de 2 minutos de trote(1º minuto suave y 2º en recuperación de velocidad). Esto mejora la velocidad y resistencia.</td>
+                </tr>
+                <tr>
+                    <td>Distancia</td>
+                    <td>Corre 2 veces por semana después del calentamiento, cubriendo 15-16 km a un ritmo moderado. Mantén una velocidad constante.</td>
+                </tr>
+                <tr>
+                    <td>Enfriamiento</td>
+                    <td>10 minutos de trote suave y estiramientos en todas las sesiones. Favorece la recuperación muscular.</td>
+                </tr>
+                <!-- Detalles para las semanas 3-4 de Media Maratón -->
+                <tr>
+                    <td rowspan="4">3ª - 4ª semana</td>
+                    <td>Calentamiento (Todas las sesiones de entrenamiento)</td>
+                    <td>Trote suave durante 15 minutos. Aumenta la frecuencia cardíaca gradualmente.</td>
+                </tr>
+                <tr>
+                    <td>Bloques de Velocidad</td>
+                    <td>Realiza 2 veces por semana 12 repeticiones de 2 minutos corriendo rápido seguido de 1 minutos de trote. Esto mejora la velocidad y resistencia.</td>
+                </tr>
+                <tr>
+                    <td>Distancia</td>
+                    <td>Corre 2 veces por semana cubriendo 15 km a ritmo moderado. Mantén una velocidad constante. Recomendación: Una de las sesiones hazla en fin de semana y hazla a ritmo suave.</td>
+                </tr>
+                <tr>
+                    <td>Enfriamiento</td>
+                    <td>15 minutos de trote suave y estiramientos tras las sesiones de bloques de velocidad y 10 minutos de trote en la sesión de distancia. Favorece la recuperación muscular.</td>
+                </tr>
+                <!-- Detalles para las semanas 5-6 de Media Maratón -->
+                <tr>
+                    <td rowspan="4">5ª - 6º Semana</td>
+                    <td>Calentamiento (Todas las sesiones de entrenamiento)</td>
+                    <td>Trote suave durante 15 minutos. Aumenta la frecuencia cardíaca gradualmente.</td>
+                </tr>
+                <tr>
+                    <td>Bloques de Velocidad</td>
+                    <td>Realiza 1 vez por semana 3 x 10 minutos . Esto mejora la velocidad y resistencia.</td>
+                </tr>
+                <tr>
+                    <td>Distancia</td>
+                    <td>Corre 3 veces (2 de 12 km y 1 de 13km)a ritmo moderado. Mantén una velocidad constante.</td>
+                </tr>
+                <tr>
+                    <td>Enfriamiento</td>
+                    <td>12 minutos de trote suave y estiramientos en todas las sesiones. Favorece la recuperación muscular.</td>
+                </tr>
+                <!-- Detalles para las semanas 7-8 de Media Maratón -->
+                <tr>
+                    <td rowspan="4">7ª y 8ª semana</td>
+                    <td>Calentamiento (Todas las sesiones de entrenamiento)</td>
+                    <td>Trote suave durante 20 minutos. Aumenta la frecuencia cardíaca gradualmente.</td>
+                </tr>
+                <tr>
+                    <td>Bloques de Velocidad</td>
+                    <td>Realiza 2 veces por semana 3 repeticiones de 10 minutos corriendo rápido seguido de 2 minutos de trote. Además, 1 vez por semana corre 5 x 1500 metros a ritmo fuerte. Descansa 3 minutos entre cada serie. Esto mejora la velocidad y resistencia.</td>
+                </tr>
+                <tr>
+                    <td>Distancia</td>
+                    <td>OPCIONAL: 4º SESIÓN. Corre 1 vez por semana cubriendo 18 km a ritmo moderado. PRUEBA DE RESISTENCIA REAL PARA UNA MEDIA.</td>
+                </tr>
+                <tr>
+                    <td>Enfriamiento</td>
+                    <td>5-10 minutos de trote suave y estiramientos en todas las sesiones. Favorece la recuperación muscular.</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Footer de la página. Al igual que el header es igual en todas las páginas. Se comparte tanto código html como código css mediante el uso de general css. -->
+
+
+
+    <footer class="footer">
+        <header>
+            <h3 class="footer__header__h3">SÍGUENOS EN NUESTRAS REDES SOCIALES</h3>
+        </header>
+        <div class="wrapper">
+            <div class="button">
+                <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+                <span><a class="link" href="https://www.facebook.com/profile.php?id=61553468563241">Facebook</a></span>
+            </div>
+            <div class="button">
+                <div class="icon"><i class="fa-brands fa-x-twitter"></i></i></div>
+                <span><a class="link" href="https://twitter.com/RunnerlandIosu">X-Twitter</a></span>
+            </div>
+            <div class="button">
+                <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+                <span><a class="link" href="https://www.instagram.com/iosurunner/">Instagram</a></span>
+            </div>
+        </div>
+        <div class="footer__contactInfo">
+            <p><b>Dirección:</b> Calle Martín Fiz Nº 12 Bajo, Vitoria-Gasteiz, Álava-Araba</p>
+            <p><b>Teléfono:</b> +34 945 058 289</p>
+            <p><b>Email:</b> runnerland2023@gmail.com</p>
+        </div>
+        <div class="footer__copyright">
+            <p>&copy; 2023 Runnerland | Todos los derechos reservados</p>
+            <a href="./politica.html">Política de privacidad</a>
+        </div>
+    </footer>
+
+</body>
+</html>

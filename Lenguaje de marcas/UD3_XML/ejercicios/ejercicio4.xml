@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+    <estudiante>
+        <nombre>Pepito</nombre>
+        <edad repetidor = "no" unidad="años">11</edad>
+        <materias>
+            <materia>
+                <título>Lenguaje</título>
+                <docente docente_nuevo = "no">Luis Ansón</docente>
+                <nota recuperacion= "no">9,8</nota>
+             </materia>
+            <materia>
+                <título>Matemáticas</título>
+                <docente docente_nuevo = "si"> Jaione Asparza</docente>
+                <nota recuperacion= "no">8,3</nota>
+             </materia>
+            <materia>
+                <título>Conocimiento del medio</título>
+                <docente docente_nuevo = "no"> Luisa Felisa</docente>
+                <nota recuperacion= "no">9,1</nota>
+             </materia>
+            <materia>
+                <título>Inglés</título>
+                <docente docente_nuevo = "no">Felipe Gómez</docente>
+                <nota recuperacion= "no">7,8</nota>
+             </materia>
+        </materias>
+    </estudiante>
+    <estudiante>
+        <nombre>Javier</nombre>
+        <edad repetidor = "no" unidad="años">11</edad>
+        <materias>
+            <materia>
+                <título>Lenguaje</título>
+                <docente docente_nuevo = "no">Luis Ansón</docente>
+                <nota recuperacion= "no">6,1</nota>
+             </materia>
+            <materia>
+                <título>Matemáticas</título>
+                <docente docente_nuevo = "si"> Jaione Asparza</docente>
+                <nota recuperacion= "si"><![CDATA[5,0]]></nota>
+             </materia>
+            <materia>
+                <título>Conocimiento del medio</título>
+                <docente docente_nuevo = "no"> Luisa Felisa</docente>
+                <nota recuperacion= "no">7,1</nota>
+             </materia>
+            <materia>
+                <título>Inglés</título>
+                <docente docente_nuevo = "no">Felipe Gómez</docente>
+                <nota recuperacion= "no">9,8</nota>
+             </materia>
+        </materias>
+    </estudiante>
+    <estudiante>
+        <nombre>Marta</nombre>
+        <edad repetidor = "no" unidad="años">11</edad>
+        <materias>
+            <materia>
+                <título>Lenguaje</título>
+                <docente docente_nuevo = "no">Luis Ansón</docente>
+                <nota recuperacion= "no">9,6</nota>
+             </materia>
+            <materia>
+                <título>Matemáticas</título>
+                <docente docente_nuevo = "si"> Jaione Asparza</docente>
+                <nota recuperacion= "no">8,9</nota>
+             </materia>
+            <materia>
+                <título>Conocimiento del medio</título>
+                <docente docente_nuevo = "no"> Luisa Felisa</docente>
+                <nota recuperacion= "no">8,4</nota>
+             </materia>
+            <materia>
+                <título>Inglés</título>
+                <docente docente_nuevo = "no">Felipe Gómez</docente>
+                <nota recuperacion= "no">7,9</nota>
+             </materia>
+        </materias>
+    </estudiante>
+</alumnos>

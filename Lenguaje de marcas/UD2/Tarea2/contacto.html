@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=""></script>
+    <title>RUNNERLAND</title>
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/especific/contacto.css">
+    <link rel="shortcut icon" href="./assets/logo_bruto.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/8ebf7ff831.js" crossorigin="anonymous"></script>
+    <script src="./javascript/contacto.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("j3vWklC2pabxz1QEU");
+      })();
+    </script>
+    
+</head>
+<body>
+    
+    <!-- Parte inicial de la página. HEADER. Parte que da cabida a los siguientes elementos: logo, nombre de la página y elemento nav que permite la navegación entre 
+    las diferentes páginas. Estos elementos tendrán sus estilos en el general css al ser comunes en todas las páginas. -->
+
+    <header class="header__general">
+        <img src="./assets/logo_bruto.png" alt="logo de runnerland" class="header__image">
+        <h1>RUNNERLAND</h1>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <button class="menu-button" id="hover-menu"><i class="fa-solid fa-bars"></i></button>
+        <ul class="header__content__nav">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="carreras.html">CARRERAS</a></li>
+          <li><a href="zapatillas.html">ZAPATILLAS</a></li>
+          <li><a href="entrenamientos.html">ENTRENAMIENTOS</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </header>
+<!-- 
+    Bloque de contenido de la página. Se muestra el formulario de contacto para que el usuario envíe el mensaje con destino a runnerlando2023@gmail.com. -->
+    <!-- Se usa una nueva funcionalidad o recurso: email.js. Libería para configurar el envío de correos de manera automática a un correo específico. Configuración en cotacto.js. -->
+    <section>
+        <div class="neumorphic-container">
+           
+            <div class="footer__contactForm">
+                <h3 data-lang="contactHeader">Contacto ¡A la Meta!</h3>
+                <form >
+                    <label for="nombre" data-lang="contactName">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="email" data-lang="contactEmail">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="mensaje" data-lang="contactMessage">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    <button data-lang="contactButton" class="contactHeader__button" onclick="sendEmail()">Enviar</button>
+                </form>
+            </div>
+            <button class="lang-button" onclick="toggleLanguage()">ES || ENG </button>
+        </div>
+
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuButton = document.getElementById('mobile-menu');
+    const hoverMenuButton = document.getElementById('hover-menu');
+    const navList = document.querySelector('.header__content__nav');
+
+    mobileMenuButton.addEventListener('click', function (e) {
+      e.stopPropagation();
+      navList.classList.toggle('show');
+    });
+
+    hoverMenuButton.addEventListener('click', function (e) {
+      e.stopPropagation(); 
+      navList.classList.toggle('show');
+    });
+
+    document.addEventListener('click', function () {
+      navList.classList.remove('show');
+    });
+
+    navList.addEventListener('click', function (e) {
+      e.stopPropagation();
+    });
+});
+    </script>
+
+    <!-- Footer de la página. Al igual que el header es igual en todas las páginas. Se comparte tanto código html como código css mediante el uso de general css. -->
+
+    <footer class="footer modifier-footer">
+        <header>
+            <h3 class="footer__header__h3">SÍGUENOS EN NUESTRAS REDES SOCIALES</h3>
+        </header>
+        <div class="wrapper">
+            <div class="button">
+                <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+                <span><a class="link" href="https://www.facebook.com/profile.php?id=61553468563241">Facebook</a></span>
+            </div>
+            <div class="button">
+                <div class="icon"><i class="fa-brands fa-x-twitter"></i></i></div>
+                <span><a class="link" href="https://twitter.com/RunnerlandIosu">X-Twitter</a></span>
+            </div>
+            <div class="button">
+                <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+                <span><a class="link" href="https://www.instagram.com/iosurunner/">Instagram</a></span>
+            </div>
+        </div>
+        <div class="footer__contactInfo">
+            <p><b>Dirección:</b> Calle Martín Fiz Nº 12 Bajo, Vitoria-Gasteiz, Álava-Araba</p>
+            <p><b>Teléfono:</b> +34 945 058 289</p>
+            <p><b>Email:</b> runnerland2023@gmail.com</p>
+        </div>
+        <div class="footer__copyright">
+            <p>&copy; 2023 Runnerland | Todos los derechos reservados</p>
+            <a href="./politica.html">Política de privacidad</a>
+        </div>
+    </footer>
+
+</body>
+</html>

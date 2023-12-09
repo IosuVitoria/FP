@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas Interactivas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        input, textarea {
+            margin-bottom: 15px;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        canvas {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .result-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .chart {
+            flex: 1;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .explanation {
+            margin-bottom: 20px;
+        }
+
+        .frequencies-explanation {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="text-center">Estadísticas Interactivas</h2>
+
+        <div class="explanation">
+            <p>En esta aplicación interactiva, puedes ingresar un conjunto de datos en tablas, similar a Excel. Puedes calcular estadísticas para columnas individuales y ver visualizaciones gráficas.</p>
+            <p>Después de ingresar los datos, haz clic en "Calcular Estadísticas" para obtener los resultados y ver visualizaciones gráficas.</p>
+        </div>
+
+        <table id="dataTable" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Data 1</th>
+                    <th>Data 2</th>
+                    <th>Data 3</th>
+                    <th>Data 4</th>
+                    <th>Data 5</th>
+                    <th>Data 6</th>
+                    <th>Data 7</th>
+                    <th>Data 8</th>
+                    <th>Data 9</th>
+                    <th>Data 10</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td contenteditable="true">10</td>
+                    <td contenteditable="true">15</td>
+                    <td contenteditable="true">20</td>
+                    <td contenteditable="true">25</td>
+                    <td contenteditable="true">30</td>
+                    <td contenteditable="true">35</td>
+                    <td contenteditable="true">40</td>
+                    <td contenteditable="true">45</td>
+                    <td contenteditable="true">50</td>
+                    <td contenteditable="true">55</td>
+                </tr>
+                <!-- Puedes agregar más filas según sea necesario -->
+            </tbody>
+        </table>
+
+        <div class="row">
+            <div class="col-md-12">
+                <button onclick="calcularEstadisticas()" class="btn btn-primary btn-block">Calcular Estadísticas</button>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <h3>Resultados</h3>
+            <div id="result"></div>
+        </div>
+
+        <div class="chart-container">
+            <canvas class="chart" id="lineChart"></canvas>
+            <canvas class="chart" id="frequencyChart"></canvas>
+        </div>
+
+        <div class="frequencies-explanation">
+            <h3>Gráfico de Frecuencias</h3>
+            <p>El gráfico de barras muestra la frecuencia de cada valor en el conjunto de datos.</p>
+            <p>Cada barra representa un valor único, y la altura de la barra indica cuántas veces aparece ese valor en los datos.</p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#dataTable').DataTable();
+        });
+
+        function calcularEstadisticas() {
+            // Obtener los datos de la tabla
+            var data = [];
+            $('#dataTable tbody tr').each(function() {
+                var row = [];
+                $(this).find('td').each(function() {
+                    row.push(parseInt($(this).text()));
+                });
+                data.push(row);
+            });
+
+            // Calcular estadísticas
+            var result = {
+                media: calcularMedia(data),
+                desviacionTipica: calcularDesviacionTipica(data),
+                varianza: calcularVarianza(data),
+                coeficienteVariacion: calcularCoeficienteVariacion(data)
+            };
+
+            // Mostrar resultados
+            mostrarResultados(result);
+
+            // Actualizar gráficos
+            actualizarGraficoLineal(data);
+            actualizarGraficoFrecuencias(data);
+        }
+
+        function calcularMedia(data) {
+            var sum = 0;
+            var count = 0;
+
+            for (var i = 0; i < data.length; i++) {
+                for (var j = 0; j < data[i].length; j++) {
+                    sum += data[i][j];
+                    count++;
+                }
+            }
+
+            return sum / count;
+        }
+
+        function calcularDesviacionTipica(data) {
+            var media = calcularMedia(data);
+            var sumSquaredDiff = 0;
+            var count = 0;
+
+            for (var i = 0; i < data.length; i++) {
+                for (var j = 0; j < data[i].length; j++) {
+                    var diff = data[i][j] - media;
+                    sumSquaredDiff += diff * diff;
+                    count++;
+                }
+            }
+
+            var variance = sumSquaredDiff / count;
+            return Math.sqrt(variance);
+        }
+
+        function calcularVarianza(data) {
+            var media = calcularMedia(data);
+            var sumSquaredDiff = 0;
+            var count = 0;
+
+            for (var i = 0; i < data.length; i++) {
+                for (var j = 0; j < data[i].length; j++) {
+                    var diff = data[i][j] - media;
+                    sumSquaredDiff += diff * diff;
+                    count++;
+                }
+            }
+
+            return sumSquaredDiff / count;
+        }
+
+        function calcularCoeficienteVariacion(data) {
+            var desviacionTipica = calcularDesviacionTipica(data);
+            var media = calcularMedia(data);
+
+            return (desviacionTipica / media) * 100;
+        }
+
+        function mostrarResultados(result) {
+            $('#result').html(`
+                <p>Media: ${result.media.toFixed(2)}</p>
+                <p>Desviación Típica: ${result.desviacionTipica.toFixed(2)}</p>
+                <p>Varianza: ${result.varianza.toFixed(2)}</p>
+                <p>Coeficiente de Variación: ${result.coeficienteVariacion.toFixed(2)}%</p>
+            `);
+        }
+
+        function actualizarGraficoLineal(data) {
+            var ctx = document.getElementById('lineChart').getContext('2d');
+            var labels = [];
+
+            for (var i = 1; i <= data[0].length; i++) {
+                labels.push('Data ' + i);
+            }
+
+            var datasets = [];
+            for (var i = 0; i < data.length; i++) {
+                datasets.push({
+                    label: 'Conjunto ' + (i + 1),
+                    data: data[i],
+                    fill: false,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    tension: 0.1
+                });
+            }
+
+            var lineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: datasets
+                }
+            });
+        }
+
+        function actualizarGraficoFrecuencias(data) {
+            var ctx = document.getElementById('frequencyChart').getContext('2d');
+            var frequencies = {};
+
+            for (var i = 0; i < data.length; i++) {
+                for (var j = 0; j < data[i].length; j++) {
+                    var value = data[i][j].toString();
+                    frequencies[value] = (frequencies[value] || 0) + 1;
+                }
+            }
+
+            var labels = Object.keys(frequencies);
+            var values = Object.values(frequencies);
+
+            var frequencyChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Frecuencia',
+                        data: values,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<club_voleibol>
+    <tienda ubicacion="Vitoria-Gasteiz" dirección= "Avenida Gasteiz Nº 31 Bajo">
+        <articulo codigo="V001CA">
+            <nombre>Camiseta del equipo</nombre>
+            <foto><![CDATA[https://th.bing.com/th/id/R.050269c8fc9cccf012783f6f2ae6951a?rik=ZpQZWtR47OIiTg&pid=ImgRaw&r=0]]></foto>
+            <descripcion>Camiseta oficial del equipo. Pruébatela!</descripcion>
+            <marca proveedor_nuevo = "No">Nike</marca>
+            <precio moneda = "euros">29.99</precio>
+            <tallas tallaje = "americano">XS, S, M, L, XL</tallas>
+            <comentarios>
+                <comentario fecha="2023-12-15">¡Excelente calidad!</comentario>
+            </comentarios>
+        </articulo>
+        <articulo codigo="V002SU">
+            <nombre>Sudadera del equipo</nombre>
+            <foto><![CDATA[https://th.bing.com/th/id/OIP.1Tp3SUcadrdIle7SG-BglwHaHa?rs=1&pid=ImgDetMain]]></foto>
+            <descripcion>Sudadera oficial del eguipo. Perfecta para cuando vas a entrenar.</descripcion>
+            <marca proveedor_nuevo="Sí">Nike</marca>
+            <precio moneda="euros">39.99</precio>
+            <tallas tallaje = "americano">XS, S, M, L, XL</tallas>
+            <comentarios>
+                <comentario fecha="2023-12-16">Muy abrigada. Voy muy cómoda a entrenar en inverno.</comentario>
+                <comentario fecha="2023-12-15">Se lava muy bien. No pierde los colores al primer lavado como ocurre con muchos de estos productos.</comentario>
+            </comentarios>
+        </articulo>
+        <articulo codigo="V003PA">
+            <nombre>Pantalón oficial</nombre>
+            <foto><![CDATA[https://contents.mediadecathlon.com/p1824195/k$535d0c3b59dad20c00a5916b22d83ac4/sq/Pantal+n+corto+de+voleibol+mujer+VSH500+azul+marino.jpg]]></foto>
+            <descripcion>Pantalón oficial del equipo</descripcion>
+            <marca proveedor_nuevo="No">Nike</marca>
+            <precio moneda="euros">19.99</precio>
+            <tallas tallaje = "americano">XS, S, M, L, XL</tallas>
+            <comentarios>
+                <comentario fecha="2023-12-13">Permite todo el arco de movimientos. Muy cómodo.</comentario>
+                <comentario fecha="2023-12-12">Un poco demasiado ajustado. No me siento del todo cómoda.</comentario>
+            </comentarios>
+        </articulo>    
+    </tienda>
+    <equipos>
+        <equipo nombre="Hegotarrak talde Senior" categoria="Senior">
+            <entrenador nombre="Andrea Anastasi" bibliografia="https://es.wikipedia.org/wiki/Categor%C3%ADa:Entrenadores_de_voleibol" />
+            <jugadoras>
+                <jugadora nombre="Laura García" nacionalidad="Española" posicion="Central" numero_camiseta="7" titular="Sí" />
+                <jugadora nombre="Ana Rodríguez" nacionalidad="Española" posicion="Opuesto" numero_camiseta="9" titular="Sí" />
+                <jugadora nombre="Elena Martínez" nacionalidad="Española" posicion="Líbero" numero_camiseta="1" titular="Sí" />
+                <jugadora nombre="Sandra López" nacionalidad="Española" posicion="Atacante" numero_camiseta="12" titular="Sí" />
+                <jugadora nombre="Isabel Fernández" nacionalidad="Española" posicion="Central" numero_camiseta="6" titular="Sí" />
+                <jugadora nombre="Carmen Ruiz" nacionalidad="Española" posicion="Opuesto" numero_camiseta="10" titular="Sí" />
+                <suplente nombre="Marta Sánchez" nacionalidad="Española" numero_camiseta="2" />
+                <suplente nombre="Lucía Pérez" nacionalidad="Española" numero_camiseta="4" />
+            </jugadoras>
+        </equipo>
+        <equipo nombre="Hegotarrak talde Junior" categoria="Junior">
+            <entrenador nombre="Lucy López" bibliografia="https://es.wikipedia.org/wiki/Categor%C3%ADa:Entrenadores_de_voleibol" />
+            <jugadoras>
+                <jugadora nombre="Leire Aramburu" nacionalidad="española" posicion="Central" numero_camiseta="7" titular="Sí" />
+                <jugadora nombre="Ainhoa Urrutia" nacionalidad="española" posicion="Opuesto" numero_camiseta="9" titular="Sí" />
+                <jugadora nombre="Nerea Larrañaga" nacionalidad="española" posicion="Líbero" numero_camiseta="1" titular="Sí" />
+                <jugadora nombre="Amaia Aguirre" nacionalidad="española" posicion="Atacante" numero_camiseta="12" titular="Sí" />
+                <jugadora nombre="Oihane Zubizarreta" nacionalidad="española" posicion="Central" numero_camiseta="6" titular="Sí" />
+                <jugadora nombre="Miren Etxeberria" nacionalidad="española" posicion="Opuesto" numero_camiseta="10" titular="Sí" />
+                <suplente nombre="Eider Gómez" nacionalidad="española" numero_camiseta="2" />
+                <suplente nombre="Izaro Martínez" nacionalidad="española" numero_camiseta="4" />
+            </jugadoras>
+        </equipo>
+        <equipo nombre="Hegotarrak talde Txiki" categoria="Alevín">
+            <entrenador nombre="Andrea Anastasi" bibliografia="https://es.wikipedia.org/wiki/Categor%C3%ADa:Entrenadores_de_voleibol" />
+            <jugadoras>
+                <jugadora nombre="Maider Gurrutxaga" nacionalidad="española" posicion="Opuesto" numero_camiseta="5" titular="Sí" />
+                <jugadora nombre="Ane Ormaetxea" nacionalidad="española" posicion="Atacante" numero_camiseta="8" titular="Sí" />
+                <jugadora nombre="Irati Aurrekoetxea" nacionalidad="española" posicion="Central" numero_camiseta="3" titular="Sí" />
+                <jugadora nombre="Leire Etxebarria" nacionalidad="española" posicion="Líbero" numero_camiseta="1" titular="Sí" />
+                <jugadora nombre="Saioa Azkue" nacionalidad="española" posicion="Central" numero_camiseta="7" titular="Sí" />
+                <jugadora nombre="Itxaso Artetxe" nacionalidad="española" posicion="Opuesto" numero_camiseta="11" titular="Sí" />
+                <suplente nombre="Iraide Lizarazu" nacionalidad="española" numero_camiseta="6" />
+                <suplente nombre="Amaia Urkijo" nacionalidad="española" numero_camiseta="9" />
+            </jugadoras>
+        </equipo>
+        
+    </equipos>
+    <partidos>
+        <partidos>
+            <!-- Partido 1 TALDE SENIOR-->
+            <partido>
+                <lugar ciudad="Gasteiz" estadio="Estadio Hegoalde" />
+                <fecha>25-10-23</fecha>
+                <equipos_participantes>
+                    <equipo_local>Hegotarrak Talde Senior</equipo_local>
+                    <equipo_visitante>Ipartarrak talde Senior</equipo_visitante>
+                </equipos_participantes>
+                <resultado>3-1</resultado>
+                <arbitro nombre="Jon Izarra" nacionalidad="española" categoria="Nacional" />
+            </partido>
+        
+            <!-- Partido 2 TALDE SENIOR-->
+            <partido>
+                <lugar ciudad="Bilbao" estadio="Estadio Indautxu" />
+                <fecha>11-11-23</fecha>
+                <equipos_participantes>
+                    <equipo_local>Indautxu Indarra</equipo_local>
+                    <equipo_visitante>Hegotarrak Talde Senior</equipo_visitante>
+                </equipos_participantes>
+                <resultado>2-3</resultado>
+                <arbitro nombre="Miren López" nacionalidad="española" categoria="Nacional" />
+            </partido>
+        
+            <!-- Partido 3 TALDE JUNIOR-->
+            <partido>
+                <lugar ciudad="Donosti" estadio="Estadio Playa Zurriola" />
+                <fecha>11-11-23</fecha>
+                <equipos_participantes>
+                    <equipo_local>Zurriolako gudariak</equipo_local>
+                    <equipo_visitante>Hegotarrak talde junior</equipo_visitante>
+                </equipos_participantes>
+                <resultado>3-2</resultado>
+                <arbitro nombre="Jon Ander Arriola" nacionalidad="española" categoria="Regional" />
+            </partido>
+        
+            <!-- Partido 4 TALDE JUNIOR-->
+            <partido>
+                <lugar ciudad="Gasteiz" estadio="Estadio Hegoalde" />
+                <fecha>18-11-23</fecha>
+                <equipos_participantes>
+                    <equipo_local>Hegotarrak talde junior</equipo_local>
+                    <equipo_visitante>Lezamako lamiak</equipo_visitante>
+                </equipos_participantes>
+                <resultado>1-3</resultado>
+                <arbitro nombre="Marta Ortega" nacionalidad="española" categoria="Regional" />
+            </partido>
+        
+            <!-- Partido 5 TALDE ALEVÍN-->
+            <partido>
+                <lugar ciudad="Gasteiz" estadio="Estadio Hegoalde" />
+                <fecha>11-11-2023</fecha>
+                <equipos_participantes>
+                    <equipo_local>Hegotarrak talde alevín</equipo_local>
+                    <equipo_visitante>Olabide ikastetxea</equipo_visitante>
+                </equipos_participantes>
+                <resultado>3-0</resultado>
+                <arbitro nombre="Eduardo Zurita" nacionalidad="española" categoria="Local" />
+            </partido>
+        
+            <!-- Partido 6 TALDE ALEVÍN-->
+            <partido>
+                <lugar ciudad="Gasteiz" estadio="Estadio San Martín" />
+                <fecha>18-11-23</fecha>
+                <equipos_participantes>
+                    <equipo_local>San Martin</equipo_local>
+                    <equipo_visitante>Hegoalde talde alevín</equipo_visitante>
+                </equipos_participantes>
+                <resultado>2-3</resultado>
+                <arbitro nombre="Jon Ander Arriola" nacionalidad="española" categoria="Local" />
+            </partido>
+        </partidos>
+        
+    </partidos>
+</club_voleibol>

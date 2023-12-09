@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;900&display=swap');
+
+
+body{
+background-image: url(../../assets/fondozapatillas.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+font-family: "Lexend", sans-serif;
+}
+
+.container__zapatillas{
+    border-radius: 20px;
+    background: #423f3fc6;
+    padding: 20px;
+    box-shadow: 8px 5px 10px #cbced1, -8px -5px 10px #ffffff;
+    color: white;
+    font-family: "Lexend", sans-serif;
+
+}
+
+
+.zapatilla__card{
+    border-radius: 20px;
+    background: #423f3fc6;
+    padding: 20px;
+    box-shadow: 8px 5px 10px #cbced1, -8px -5px 10px #ffffff;
+    color: white;
+    font-family: "Lexend", sans-serif;
+}
+
+.image{
+   
+    display: flex;
+    margin: 0 auto;
+}
+
+.foto_contacto{
+position: absolute;
+    width: 350px;
+    justify-content: center;
+}
+
+/* Estilos trabajados para el menú colapsado */
+
+.header__content__nav li {
+    margin-right: 20px;
+}
+
+.header__content__nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 2%;
+    transition: background-color 0.3s ease;
+}
+
+.header__content__nav a:hover {
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+.header__content__nav{
+    margin-top: 1%;
+    display: flex;
+    list-style: none;
+}
+
+.header__content__nav li{
+    vertical-align: center;
+    justify-content: center;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+}
+
+.menu-button {
+    cursor: pointer;
+    background: linear-gradient(to top right, #343760, #709dc0);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #555;
+}
+
+@media only screen and (max-width: 768px) {
+    .header__content__nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 65px;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(to top right, #6f7086, #91bcde);
+      box-shadow: 0 4px 6px rgba(147, 97, 97, 0.1);
+      z-index: 1;
+    }
+
+    .header__content__nav.show {
+      display: flex;
+    }
+
+    .header__content__nav li {
+      margin-right: 0;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+
+    .menu-button {
+      display: block;
+    }
+}

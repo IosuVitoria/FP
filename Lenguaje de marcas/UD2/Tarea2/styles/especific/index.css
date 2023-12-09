@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;900&display=swap');
+
+/* Cada página va a tener su propio fondo, dando una imagen más dinámica al usuario.  */
+body{
+    background-image: url(../../assets/fondoindex.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/*CSS Dedidcado a la parte del carrusel de fotograías.*/
+
+.carousel-container {
+
+    position: relative;
+    max-width: 50%;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 3px 3px rgba(91, 89, 89, 0.717);
+    display: flex;
+    margin: 0 auto;
+}
+
+.slide-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: #423f3fc6;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 8px 5px 10px #cbced1, -8px -5px 10px #ffffff;
+    color: white;
+}
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider__button__left,
+.slider__button__right{
+    background: #423f3fc6;
+    box-shadow: 0 0 2px 2px white;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: #555;
+}
+
+/*Este CSS controla los estilos que tiene la sección de links de la parte principal de la landing page*/
+
+.index__links__race__img{
+    width: 300px;
+}
+
+.index__links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #423f3fc6;
+    padding: 20px;
+    box-shadow: 8px 5px 10px #cbced1, -8px -5px 10px #ffffff;
+    color: white;
+}
+
+.index__links__header{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: justify;
+}
+
+.index__links__header h4{
+    margin-top: 25px;
+    transform: translateX(45%);
+    background: linear-gradient(to top right, #343760a7, #709dc0a1);
+    box-shadow: 8px 5px 10px #cbced1, -8px -5px 10px #ffffff;;
+    overflow-x: hidden;
+    width: 65%;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 45px;
+    margin-left: 5%;
+}
+
+.index__links__train,
+.index__links__race,
+.index__links__shoes,
+.index__links__contact{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    /* transform: translateX(-50%); */
+    margin-bottom: 50px;
+    border-radius: 50px;
+    padding: 20px;
+    background: linear-gradient(to top right, #343760a7, #709dc0a1);
+    box-shadow: 8px 5px 10px #cbced1, -8px -5px 10px #ffffff;;
+}
+.index__links__train a,
+.index__links__race a,
+.index__links__shoes a,
+.index__links__contact a{
+    text-decoration: none;
+    color: white;
+    word-wrap: break-word;
+
+}
+
+.modifier__right{
+    margin-left: 40%;
+}
+
+.modifier__left{
+    margin-right: 40%;
+}
+
+@media (max-width: 500px) {
+
+    .carousel-container{
+        display: block;
+    }
+
+
+    .index__links{
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .index__links__header{
+        font-size: 10px;
+    }
+
+    .index__links__train,
+    .index__links__race,
+    .index__links__shoes,
+    .index__links__contact{
+    gap: 10px;
+    margin-bottom: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    }
+
+    .index__links__race__img{
+        width: 150px;
+    }
+
+    .modifier__right{
+        margin-left: 5%;
+    }
+    
+    .modifier__left{
+        margin-right: 5%;
+    }
+
+    .index__links__train a,
+    .index__links__race a,
+    .index__links__shoes a,
+    .index__links__contact a{
+        font-size: 10px;
+    }
+}

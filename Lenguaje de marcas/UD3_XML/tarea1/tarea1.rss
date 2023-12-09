@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <!-- Información general del canal -->
+    <title>Club de Voleibol Noticias</title>
+    <link>https://ejemplo.com/noticias-voleibol</link>
+    <description>Últimas noticias sobre el club de voleibol</description>
+    <language>es</language>
+
+    <!-- Aclaraciones sobre los equipos -->
+    <dc:creator>Administrador del Club</dc:creator>
+    <dc:description>
+      Este canal RSS proporciona noticias actualizadas sobre los equipos de voleibol del club.
+      Aquí encontrarás información sobre partidos, jugadores y eventos relacionados con nuestro club.
+    </dc:description>
+
+    <!-- Noticias para el equipo Senior -->
+    <item>
+      <title>Victoria del equipo Senior en el último partido</title>
+      <link>https://ejemplo.com/noticia1</link>
+      <description>
+        El equipo Senior logró una victoria impresionante en su último partido contra Ipartarrak.
+        Lee más sobre el emocionante encuentro y el rendimiento destacado de nuestros jugadores.
+      </description>
+      <pubDate>Thu, 20 Jan 2023 12:00:00 GMT</pubDate>
+    </item>
+    
+    <item>
+      <title>Entrenador del equipo Senior destaca la dedicación del equipo</title>
+      <link>https://ejemplo.com/noticia2</link>
+      <description>
+        Andrea Anastasi, el entrenador del equipo Senior, elogia el arduo trabajo y la dedicación de los jugadores.
+        Descubre sus comentarios sobre el rendimiento del equipo en la temporada actual.
+      </description>
+      <pubDate>Fri, 21 Jan 2023 14:30:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Próximo enfrentamiento del equipo Senior</title>
+      <link>https://ejemplo.com/noticia3</link>
+      <description>
+        Prepárate para el próximo partido del equipo Senior contra Indautxu Indarra. Conoce los detalles y expectativas para el emocionante encuentro.
+      </description>
+      <pubDate>Sat, 22 Jan 2023 10:00:00 GMT</pubDate>
+    </item>
+
+    <!-- Añadir noticias para otros equipos según sea necesario -->
+
+  </channel>
+</rss>
