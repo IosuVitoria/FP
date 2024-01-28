@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alineamiento de Secuencias de ADN</title>
+    <style>
+        body {
+            background-color: #f3f4f6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4a5568;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #d2d6dc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            resize: none;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4a5568;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #openModalBtn {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4a5568;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 80%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #d2d6dc;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2c5282;
+            color: #ffffff;
+        }
+
+        .empty {
+            background-color: #ffffff; /* Fondo blanco para celdas vacías */
+        }
+
+        .match {
+            background-color: #c0d3eb; /* Azul claro para coincidencias */
+        }
+
+        .insertion {
+            background-color: #f0cbd4; /* Rosa claro para inserciones */
+        }
+
+        .deletion {
+            background-color: #bfe9b5; /* Verde claro para eliminaciones */
+        }
+
+        .replacement {
+            background-color: #fedf8a; /* Amarillo claro para reemplazos */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Alineamiento de Secuencias de ADN</h1>
+
+        <p>El alineamiento de secuencias genómicas es una técnica fundamental en bioinformática y genómica comparativa. Consiste en encontrar las similitudes y diferencias entre dos secuencias de ADN o ARN, lo que permite identificar regiones conservadas y posibles funciones biológicas.</p>
+        
+        <p>Existen dos tipos principales de alineamiento: alineamiento global y alineamiento local. El alineamiento global compara las secuencias en su totalidad, mientras que el alineamiento local busca regiones similares dentro de las secuencias.</p>
+
+        <div>
+            <label for="sequenceOne">Secuencia 1:</label><br>
+            <textarea id="sequenceOne" placeholder="Ingrese la secuencia de ADN"></textarea>
+        </div>
+
+        <div>
+            <label for="sequenceTwo">Secuencia 2:</label><br>
+            <textarea id="sequenceTwo" placeholder="Ingrese la secuencia de ADN"></textarea>
+        </div>
+
+        <button onclick="alignSequences()">Alinear Secuencias</button>
+
+        <button id="openModalBtn" onclick="openModal()">Ver Resultados</button>
+
+        <div id="result" class="modal">
+            <div class="modal-content">
+                <h2>Resultado del Alineamiento</h2>
+                <table id="alignmentTable"></table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function alignSequences() {
+            var sequenceOne = document.getElementById("sequenceOne").value.toUpperCase();
+            var sequenceTwo = document.getElementById("sequenceTwo").value.toUpperCase();
+
+            var matrix = [];
+            var lenOne = sequenceOne.length + 1;
+            var lenTwo = sequenceTwo.length + 1;
+
+            for (var i = 0; i < lenOne; i++) {
+                matrix[i] = [];
+                for (var j = 0; j < lenTwo; j++) {
+                    matrix[i][j] = 0;
+                }
+            }
+
+            for (var i = 1; i < lenOne; i++) {
+                for (var j = 1; j < lenTwo; j++) {
+                    var cost = (sequenceOne[i - 1] === sequenceTwo[j - 1]) ? 0 : 1;
+                    matrix[i][j] = Math.min(matrix[i - 1][j] + 1, matrix[i][j - 1] + 1, matrix[i - 1][j - 1] + cost);
+                }
+            }
+
+            var resultHtml = "<tr><th>Posición</th><th>Secuencia 1</th><th>Secuencia 2</th><th>Tipo de Alteración</th></tr>";
+
+            var i = lenOne - 1;
+            var j = lenTwo - 1;
+            while (i > 0 || j > 0) {
+                var cellClass = "";
+                var alterationType = "";
+
+                // Asegurarse de que i y j estén dentro de los límites de la matriz
+                var baseOne = (i > 0) ? sequenceOne[i - 1] : '';
+                var baseTwo = (j > 0) ? sequenceTwo[j - 1] : '';
+
+                if (i > 0 && matrix[i][j] == matrix[i - 1][j] + 1) {
+                    cellClass = "deletion";
+                    alterationType = `Eliminación: ${baseOne}`;
+                    i--;
+                } else if (j > 0 && matrix[i][j] == matrix[i][j - 1] + 1) {
+                    cellClass = "insertion";
+                    alterationType = `Inserción: ${baseTwo}`;
+                    j--;
+                } else {
+                    if (i > 0 && j > 0 && matrix[i][j] == matrix[i - 1][j - 1]) {
+                        cellClass = "match";
+                        alterationType = `Coincidencia: ${baseOne}`;
+                    } else {
+                        cellClass = "replacement";
+                        alterationType = `Reemplazo: ${baseOne} → ${baseTwo}`;
+                    }
+                    i--;
+                    j--;
+                }
+
+                resultHtml += `<tr class="${cellClass}"><td>${i + 1}</td><td>${baseOne}</td><td>${baseTwo}</td><td>${alterationType}</td></tr>`;
+            }
+
+            document.getElementById("alignmentTable").innerHTML = resultHtml;
+        }
+
+        function openModal() {
+            var modal = document.getElementById("result");
+            modal.style.display = "flex";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("result");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+
+</body>
+</html>

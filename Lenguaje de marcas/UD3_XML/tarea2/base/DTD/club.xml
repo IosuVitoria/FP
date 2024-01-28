@@ -1,0 +1,76 @@
+<!DOCTYPE club_voleibol SYSTEM "./club.dtd">
+<club_voleibol>
+    <tienda ubicacion="Bilbao">
+        <articulo marca="Nike" foto="img.jpg" cod="AB123456A">
+            <tipoarticulo>Camiseta oficial</tipoarticulo>
+            <descripcion>Camiseta oficial del club</descripcion>
+            <precio>29.99</precio>
+            <comentarios fecha="2023-07-01">Muy cómoda</comentarios>
+            <comentarios fecha="2023-07-02">Muy cómoda</comentarios>
+        </articulo>
+    </tienda>
+    <!--  Información del equipo  -->
+    <equipo categoria="Segunda">
+        <jugadores>
+            <jugador camiseta="7" titular="si">
+                <nombre>Luis García</nombre>
+                <posicion>Atacante</posicion>
+                <nacionalidad>Argentina</nacionalidad>
+            </jugador>
+            <jugador camiseta="3" titular="no">
+                <nombre>Ana Silva</nombre>
+                <posicion>Libero</posicion>
+                <nacionalidad>Brasil</nacionalidad>
+            </jugador>
+        </jugadores>
+        <denominacion>Club VolleyTeam</denominacion>
+        <entrenador>
+            <entrenador_nombre>Julio Velasco</entrenador_nombre>
+            <entrenador_url>www.wikipedia.org/wiki/Julio_Velasco</entrenador_url>
+        </entrenador>
+    </equipo>
+    <equipo categoria="Segunda">
+        <jugadores>
+            <jugador camiseta="7" titular="si">
+                <nombre>Luis García</nombre>
+                <posicion>Atacante</posicion>
+                <nacionalidad>Argentina</nacionalidad>
+            </jugador>
+            <jugador camiseta="3" titular="no">
+                <nombre>Ana Silva</nombre>
+                <posicion>Libero</posicion>
+                <nacionalidad>Brasil</nacionalidad>
+            </jugador>
+        </jugadores>
+        <denominacion>Club VolleyTeam B</denominacion>
+        <entrenador>
+            <entrenador_nombre>Julio Velasco</entrenador_nombre>
+            <entrenador_url>www.wikipedia.org/wiki/Julio_Velasco</entrenador_url>
+        </entrenador>
+    </equipo> 
+    <!--  Información del partido  -->
+    <partido>
+        <lugar>Estadio Nacional</lugar>
+        <fecha>2023-08-01</fecha>
+        <teams>
+            <team local="si" puntuacion="20">Equipo A</team>
+            <team local="no" puntuacion="25">Equipo B</team>
+        </teams>
+        <arbitro categoria="internacional">
+            <arbitro_nombre>Juan Pérez</arbitro_nombre>
+            <arbitro_nacionalidad>Argentina</arbitro_nacionalidad>
+        </arbitro>
+    </partido>
+    <partido>
+        <lugar>Estadio Nacional</lugar>
+        <fecha>2023-08-01</fecha>
+        <teams>
+            <team local="si" puntuacion="20">Equipo A</team>
+            <team  puntuacion="25">Equipo B</team>
+        </teams>
+        <arbitro categoria="nacional">
+            <arbitro_nombre>Juan Pérez</arbitro_nombre>
+            <arbitro_nacionalidad>Argentina</arbitro_nacionalidad>
+        </arbitro>
+    </partido>
+</club_voleibol>

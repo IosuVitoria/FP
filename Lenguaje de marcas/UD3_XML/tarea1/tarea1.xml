@@ -1,5 +1,7 @@
 <club_voleibol>
-    <tienda ubicacion="Vitoria-Gasteiz" dirección= "Avenida Gasteiz Nº 31 Bajo">
+    <tienda 
+    ubicacion="Vitoria-Gasteiz" 
+    dirección= "Avenida Gasteiz Nº 31 Bajo">
         <articulo codigo="V001CA">
             <nombre>Camiseta del equipo</nombre>
             <foto><![CDATA[https://th.bing.com/th/id/R.050269c8fc9cccf012783f6f2ae6951a?rik=ZpQZWtR47OIiTg&pid=ImgRaw&r=0]]></foto>
@@ -155,3 +157,28 @@
         
     </partidos>
 </club_voleibol>
+
+<!-- 
+Artículo adaptado con la etiqueta canónical: -->
+
+<!-- <articulo codigo="V001CA">
+    <nombre>Camiseta del equipo</nombre>
+    <foto><![CDATA[https://th.bing.com/th/id/R.050269c8fc9cccf012783f6f2ae6951a?rik=ZpQZWtR47OIiTg&pid=ImgRaw&r=0]]></foto>
+    <descripcion><![CDATA[
+        Camiseta oficial del equipo. Pruébatela!
+        <link canonical="https://ejemplo.com/tienda/camiseta-equipo">Más detalles sobre la camiseta</link>
+    ]]></descripcion>
+    <marca proveedor_nuevo="No">Nike</marca>
+    <precio moneda="euros">29.99</precio>
+    <tallas tallaje="americano">XS, S, M, L, XL</tallas>
+    <comentarios>
+        <comentario fecha="2023-12-15">¡Excelente calidad!</comentario>
+    </comentarios>
+</articulo> -->
+
+<!-- Ejemplo de fechas puestas en el formato ISO 8601 (RFC 3339) para las fechas.
+
+<comentarios>
+    <comentario fecha="2023-12-13T00:00:00Z">Permite todo el arco de movimientos. Muy cómodo.</comentario>
+    <comentario fecha="2023-12-12T00:00:00Z">Un poco demasiado ajustado. No me siento del todo cómoda.</comentario>
+</comentarios> -->

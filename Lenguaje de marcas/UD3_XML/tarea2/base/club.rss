@@ -1,0 +1,23 @@
+<rss version="2.0">
+    <!--   Propiedades del canal, title, link y description son obligatorios.  -->
+    <channel>
+    <title>Ser o no ser. Teatro Principal Antzokia</title>
+    <link>https://www.vitoria-gasteiz.org/wb021/was/contenidoAction.do?idioma=es;uid=u571a5aad_181ada9b3ad__7fdf</link>
+    <description>Rss de ejemplo</description>
+    <!--   Elemento item no es obligatorio. Puede haber cero o varios. Se piden 3.
+                        Un item debe tener al menos el title o la descripción para que valide
+                     -->
+    <item>
+    <title>Festivales 2023</title>
+    </item>
+    <item>
+    <description>Novedades, en los festivales del 2023</description>
+    </item>
+    <item>
+    <title>Cristina Oria</title>
+    <description> Nuevo restaurante Cristina Oria en Donostia</description>
+    <link>https://www.diariovasco.com/gastronomia/restaurantes/restaurante-cristina-oria-san-sebastian-20220930120203-nt.html</link>
+    <pubDate>Wed, 5 Jan 2023 13:22:00 GMT</pubDate>
+    </item>
+    </channel>
+    </rss>

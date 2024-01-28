@@ -1,0 +1,136 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definición del elemento club_voleibol -->
+  <xs:element name="club_voleibol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="tienda" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="articulo" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="tipoarticulo" type="xs:string"/>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="precio" type="xs:decimal"/>
+                    <xs:element name="comentarios" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="fecha" type="xs:date" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="marca" type="xs:string" use="required"/>
+                  <xs:attribute name="foto" type="xs:string" use="required"/>
+                  <xs:attribute name="cod" type="CodigoArticuloType" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="ubicacion" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- Definición del elemento equipo -->
+        <xs:element name="equipo" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="denominacion" type="xs:string"/>
+              <xs:element name="jugadores">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="jugador" minOccurs="1" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="nombre" type="xs:string"/>
+                          <xs:element name="posicion" type="xs:string"/>
+                          <xs:element name="nacionalidad" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="camiseta" type="NumeroCamisetaType"/>
+                        <xs:attribute name="titular" type="xs:string" default="no"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="entrenador">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nombre" type="xs:string"/>
+                    <xs:element name="url" type="xs:anyURI"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="categoria" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- Definición del elemento partido -->
+        <xs:element name="partido" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="lugar" type="xs:string"/>
+              <xs:element name="fecha" type="xs:date"/>
+              <xs:element name="teams">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="team" minOccurs="2" maxOccurs="2">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="local" type="xs:string"/>
+                            <xs:attribute name="puntuacion" type="xs:positiveInteger"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="arbitro">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nombre" type="xs:string"/>
+                    <xs:element name="nacionalidad" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="categoria" type="CategoriaArbitroType" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Tipos definidos -->
+
+  <!-- Tipo para el código del artículo -->
+  <xs:simpleType name="CodigoArticuloType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{2}\d{6}[A-C]"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Tipo para el número de camiseta -->
+  <xs:simpleType name="NumeroCamisetaType">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="99"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Tipo para la categoría del árbitro -->
+  <xs:simpleType name="CategoriaArbitroType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="internacional"/>
+      <xs:enumeration value="nacional"/>
+      <xs:enumeration value="regional"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

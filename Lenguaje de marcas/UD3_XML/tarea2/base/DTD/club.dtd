@@ -1,0 +1,62 @@
+<!-- Definición del elemento principal: club_voleibol -->
+<!ELEMENT club_voleibol (tienda?, equipo+, partido*)>
+
+<!-- Definición del elemento tienda con atributo ubicacion -->
+<!ELEMENT tienda (articulo+)>
+<!ATTLIST tienda ubicacion CDATA #REQUIRED>
+
+<!-- Definición del elemento articulo con atributos marca, foto y cod -->
+<!ELEMENT articulo (tipoarticulo, descripcion, precio, comentarios*)>
+<!ATTLIST articulo marca CDATA #REQUIRED
+                foto CDATA #REQUIRED
+                cod ID #REQUIRED> <!-- Se utiliza ID para indicar que el valor de cod debe ser único -->
+
+<!-- Definición de elementos internos del articulo: tipoarticulo, descripcion, precio y comentarios -->
+<!ELEMENT tipoarticulo (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT comentarios (#PCDATA)>
+<!ATTLIST comentarios fecha CDATA #REQUIRED>
+
+<!-- Definición del elemento equipo con atributo categoria -->
+<!ELEMENT equipo (jugadores, denominacion, entrenador)>
+<!ATTLIST equipo categoria CDATA #REQUIRED>
+
+<!-- Definición del elemento jugadores -->
+<!ELEMENT jugadores (jugador+)>
+
+
+<!-- Definición del elemento jugador con atributos camiseta y titular -->
+<!ELEMENT jugador (nombre, posicion, nacionalidad)>
+<!ATTLIST jugador camiseta CDATA #REQUIRED
+                titular CDATA "no">
+
+<!-- Definición de elementos internos del jugador: nombre, posicion y nacionalidad -->
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT posicion (#PCDATA)>
+<!ELEMENT nacionalidad (#PCDATA)>
+
+<!-- Definición de elementos internos del jugador: nombre, posicion y nacionalidad -->
+<!ELEMENT denominacion (#PCDATA)>
+<!ELEMENT entrenador (entrenador_nombre, entrenador_url)>
+<!ELEMENT entrenador_nombre (#PCDATA)>
+<!ELEMENT entrenador_url (#PCDATA)>
+
+<!-- Definición del elemento partido con atributos lugar, fecha y elementos teams y arbitro -->
+<!ELEMENT partido (lugar, fecha, teams, arbitro)>
+<!ELEMENT lugar (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+
+<!-- Definición del elemento teams con elementos team y atributo opcional local -->
+<!ELEMENT teams (team*, team?)>
+
+<!-- Definición del elemento team con atributos local y puntuacion -->
+<!ELEMENT team (#PCDATA)>
+<!ATTLIST team local CDATA #IMPLIED 
+               puntuacion CDATA #REQUIRED>
+
+<!-- Definición del elemento arbitro con elementos arbitro_nombre y arbitro_nacionalidad y atributo categoria -->
+<!ELEMENT arbitro (arbitro_nombre, arbitro_nacionalidad)>
+<!ATTLIST arbitro categoria (internacional|nacional|regional) #REQUIRED>
+<!ELEMENT arbitro_nombre (#PCDATA)>
+<!ELEMENT arbitro_nacionalidad (#PCDATA)>
