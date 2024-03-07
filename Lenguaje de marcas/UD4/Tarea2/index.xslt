@@ -14,7 +14,7 @@
                 <img src= "./logotipo.png" alt= "Reservas" />
                 <a href="./tienda.xml">Tienda</a>
                 <a href="./equipo.xml">Equipos</a>
-                <a href="./version.xml">Partidos</a>
+                <a href="./partidos.xml">Partidos</a>
             </header>
             
             <main class="principal">

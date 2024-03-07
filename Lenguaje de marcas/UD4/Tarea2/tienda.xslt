@@ -14,7 +14,7 @@
                 <img src= "./logotipo.png" alt= "Reservas" />
                 <a href="./tienda.xml">Tienda</a>
                 <a href="./equipo.xml">Equipos</a>
-                <a href="./version.xml">Partidos</a>
+                <a href="./partidos.xml">Partidos</a>
             </header>
             
             <main class="principal">
@@ -31,28 +31,28 @@
     <!-- Plantilla para los artículos de la tienda. -->
     
     <xsl:template match="articulo">
-        <article></article>
-        <div class="articulo">
-            <img src="{@foto}" alt="Imagen del artículo"/>
-        </div>
-        <div class="articulo">
-            <h2><xsl:value-of select="nombre"/></h2>
-            <p><xsl:value-of select="descripcion"/></p>
-            <p>Precio: <xsl:value-of select="precio"/> €</p>
-            <h3>Comentarios:</h3>
-            <xsl:apply-templates select="comentarios"/>
-        </div>
+        <article>
+            <div class="articulo">
+                <img src="{@foto}" alt="Imagen del artículo"/>
+            </div>
+            <div style = "color:black">
+                <h2 ><xsl:value-of select="precio"/> €</h2>               
+                <h3 >
+                    <xsl:text>Comentarios: </xsl:text><xsl:value-of select="count(comentarios)"/><xsl:text></xsl:text>
+                </h3>
+                <ul>
+                     <xsl:apply-templates select="comentarios"/>
+                </ul>
+            </div>
+        </article>
         
     </xsl:template>
 
     <!-- Plantilla para los elementos "comentarios" -->
     <xsl:template match="comentarios">
-        <div class="comentario">
-            <!-- Mostrar la fecha del comentario -->
-            <p><strong>Fecha:</strong> <xsl:value-of select="@fecha"/></p>
-            <!-- Mostrar el contenido del comentario -->
-            <p><xsl:value-of select="."/></p>
-        </div>
+        <li class="comentario" style = "color:black">
+             <xsl:value-of select="@fecha"/> : <xsl:value-of select="."/>
+        </li>
     </xsl:template>
    
 

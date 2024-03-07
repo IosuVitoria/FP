@@ -2,7 +2,7 @@ body {
 	margin:0;
 	padding: 0;
 	background-image: url('./fondo.jpg');
-	height: 80vh;
+	height: 70vh;
 }
 
 /* Estilos del header */
@@ -34,7 +34,7 @@ article {
 }
 
 main {
-	background-image:linear-gradient(rgb(255 255 255 / 50%), rgba(245, 152, 10, 0.5)),url("../img/fondo.jpg");
+	background-image:linear-gradient(rgb(255 255 255 / 50%), rgba(245, 152, 10, 0.5));
 	color: #F5FDED;
 	min-height: calc(100vh - 135px - 40px);
 	padding: 20px;

@@ -32,7 +32,7 @@ article {
 }
 
 main {
-	background-image:linear-gradient(rgb(255 255 255 / 50%), rgba(245, 152, 10, 0.5)),url("../img/fondo.jpg");
+	/* background-image:linear-gradient(rgb(255 255 255 / 50%), rgba(245, 152, 10, 0.5)),url("../img/fondo.jpg"); */
 	color: #F5FDED;
 	min-height: calc(100vh - 135px - 40px);
 	padding: 20px;
@@ -67,6 +67,10 @@ main h1 {
 /* Estilos de tienda */
 .articulo {
 	border: 10px solid black;
+}
+
+.comentario {
+	color: black !important;
 }
 
 
@@ -106,6 +110,7 @@ h1 a:hover {
 
 /*Estilos para partidos */
 table {
+	margin-top: -150px !important;
 	width: 60%;
 	margin: auto;
 	border-collapse: collapse;
