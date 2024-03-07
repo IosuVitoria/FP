@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./estilos.xslt"?>
+<?xml-stylesheet type="text/xsl" href="./estilos_lista.xslt"?>
+<biblioteca>
+    <informacion>
+        <nombre>Biblioteca Municipal</nombre>
+        <direccion>Calle Principal, Ciudad, País</direccion>
+        <telefono>123-456-789</telefono>
+        <descripcion>Esta es la descripción de la biblioteca.</descripcion>
+        <horario>Lunes a Viernes: 9am - 6pm</horario>
+    </informacion>
+    <libros>
+        <libro>
+            <titulo>El gran Gatsby</titulo>
+            <autor>F. Scott Fitzgerald</autor>
+            <genero>Novela</genero>
+            <descripcion>Esta es la descripción de El gran Gatsby.</descripcion>
+        </libro>
+        <libro>
+            <titulo>Cien años de soledad</titulo>
+            <autor>Gabriel García Márquez</autor>
+            <genero>Realismo mágico</genero>
+            <descripcion>Esta es la descripción de Cien años de soledad.</descripcion>
+        </libro>
+        <libro>
+            <titulo>1984</titulo>
+            <autor>George Orwell</autor>
+            <genero>Ciencia ficción</genero>
+            <descripcion>Esta es la descripción de 1984.</descripcion>
+        </libro>
+    </libros>
+</biblioteca>
